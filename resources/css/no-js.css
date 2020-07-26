@@ -1,0 +1,12 @@
+
+
+#container {
+    display: none;
+    background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.9) 25%, rgba(0,0,0,1) 95%);
+    height: auto !important;
+}
+
+html {
+    overflow-y: hidden;
+}
+
