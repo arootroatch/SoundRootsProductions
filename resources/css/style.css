@@ -11,6 +11,7 @@ html {
     scrollbar-width: none; /*Firefox*/
     -ms-overflow-style: none;  /*Internet Explorer 10+*/
     color: rgb(199, 199, 199);
+    background-color: black;
 }
 html::-webkit-scrollbar { /*WebKit */
     width: 0;
@@ -149,13 +150,9 @@ h2::after{
 /* nav elements */
 
 #menuBtn {
-    
     position: fixed;
     top: 10px;
     left: 10px;
-    
-    
-    
     z-index: 1;
 }
 #sideNav {
@@ -179,26 +176,23 @@ nav button {
 
 nav button ion-icon {
     font-size: 30px;
-    color: white;
-    
-    
+    color: white;   
 }
 
 #main {
-    transition: margin-left .5s;
+    transition: .5s;
     position: relative;
     margin-right: 55px;
+    
 }
 
 nav ul {
     text-align: right;
-    padding-top: 25px;
-    padding-right: 25px;
+    padding: 25px 25px 0 10px;
 }
 nav ul li {
     list-style: none;
-    line-height: 200%;
-    white-space: nowrap;
+    padding-bottom: 20px;
     transition: .2s;
     
 
@@ -207,16 +201,29 @@ nav ul li {
 nav ul li:hover {
     transform: translateX(-10px);
 }
-nav ul li:hover>a {
+.navLink:hover {
     color: white;
 }
 
 .navLink {
     font-family: 'OPTIAgency-Gothic';
     text-decoration: none;
-    font-size: 120%;
+    font-size: 110%;
     color: rgb(199, 199, 199);
     transition: .2s;
+    letter-spacing: 4px;
+}
+
+nav div {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: right;
+}
+
+nav div p a {
+    font-size: 120%;
+    margin-left: 20px;
 }
 
 
@@ -297,7 +304,7 @@ nav ul li:hover>a {
     position: absolute;
     top: 75%;
     left: 50%;
-    transform: translateX(-52%);
+    transform: translateX(-50%);
 }
 #welcome-section h1 {
     white-space: nowrap;
@@ -411,7 +418,8 @@ nav ul li:hover>a {
 #sticky {
     position: -webkit-sticky;
     position: sticky;
-    top: 10px;
+    top: 0;
+    padding-top: 10px;
     min-height: 867px;
     height: 100vh;
     background-image: radial-gradient(rgba(0,0,0,.85), rgba(0,0,0,1));
@@ -644,6 +652,39 @@ figcaption {
     right: 0;
 }
 
+/* Testimonials */
+#triangleSVG {
+    position: absolute;;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 130px;
+    /* z-index: 2; */
+    -webkit-filter: drop-shadow(0 4px 2px rgb(0, 35, 110));
+            filter: drop-shadow(0 4px 2px rgb(0, 35, 110));
+}
+
+#testimonials {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/shutterstock_559649956.jpg');
+    position: relative;
+    width: calc(100vw - 155px);
+    padding-right: 105px;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border-bottom: 2px solid black;
+}
+
+#testimonials h2 {
+    margin-top: 50px;
+}
+
+
+
+
+/* Contact US  */
+
 #contact {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6) 60%, rgba(0, 0, 0, 1) ), url('img/blueaudio.jpg');
     background-attachment: fixed;
@@ -653,16 +694,7 @@ figcaption {
     width: calc(100vw - 155px);
     padding-right: 105px;
     position: relative;
-}
-
-#contact svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 130px;
-    -webkit-filter: drop-shadow(0 4px 2px rgb(0, 35, 110));
-            filter: drop-shadow(0 4px 2px rgb(0, 35, 110));
+   
 }
 
 #contact h2 {
@@ -679,7 +711,7 @@ figcaption {
     font-size: 140%;
     line-height: 150%;
     text-shadow: 3px 3px 5px rgb(0, 68, 255);
-    margin-bottom: 100px;
+    padding-bottom: 100px;
    
 }
 

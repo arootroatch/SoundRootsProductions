@@ -8,6 +8,7 @@ var enabled = 'yes';
 var faderPath = document.getElementById('scrolltrack');
 var fader = document.getElementById('scrollthumb');
 
+
 //click and drag
 fader.onmousedown = function(event) {
     enabled = 'no';
@@ -69,13 +70,13 @@ window.onscroll = function scrollLink(){
 
 function openNav() {
     document.getElementById("sideNav").style.width = "250px";
-    // document.getElementById("main").style.marginLeft = "75px";
+    document.getElementById("main").style.opacity = "0.5";
     // document.getElementById("welcome-section").style.marginLeft = "75px";
 }
 
 function closeNav() {
     document.getElementById("sideNav").style.width = "0px";
-    // document.getElementById("main").style.marginLeft = "0px";
+    document.getElementById("main").style.opacity = "1";
     // document.getElementById("welcome-section").style.marginLeft = "0px";
 
 }
