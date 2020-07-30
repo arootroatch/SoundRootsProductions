@@ -81,6 +81,19 @@ function closeNav() {
 
 }
 
+let closed = true;
+
+function toggleNestedNav(){
+    if (closed == true) {
+        document.getElementById("nestedNav").style.height = "190px";
+        closed = false;
+    } else {
+        document.getElementById("nestedNav").style.height = "0px";
+        closed = true;
+    }
+}
+
+
 //curator
 
 /* curator-feed-default-feed-layout */

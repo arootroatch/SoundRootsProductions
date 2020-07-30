@@ -31,11 +31,19 @@
         <ul>
             <li><a href="#aboutAnchor" class="navLink">About</a></li>
             <li><a href="#philosophyAnchor" class="navLink">Our Philosophy</a></li>
-            <li><a href="#servicesAnchor" class="navLink">Our Services</a></li>
-            <li><a href="#testimonials" class="navLink">Why Sound Roots?</a></li>
+            <li><a href="#" onclick="toggleNestedNav()" class="navLink">Our Services</a></li>
+            <div id="nestedNav">
+                <ul>
+                    <li><a href="#" class="navLinkInt">Audio Engineering</a></li>
+                    <li><a href="#" class="navLinkInt">DMX Lighting</a></li>
+                    <li><a href="#" class="navLinkInt">Maintenance &amp; <br>Repair</a></li>
+                    <li><a href="#" class="navLinkInt">Programming</a></li>
+                </ul>
+            </div>
+            <li><a href="#testimonials" class="navLink">Why Sound<br>Roots?</a></li>
             <li><a href="#contact" class="navLink">Contact Us</a></li>
         </ul>
-        <div>
+        <div id="bottomDiv">
             <p style="margin-bottom: 10px; font-size: 90%;"><a class="navLink" href="#top">Back to top</a></p>
             <p>
                 <a href="https://www.facebook.com/soundrootsproductions/" target="_blank" class="logoLink"><ion-icon id="logo-facebook" name="logo-facebook"></ion-icon></a>
