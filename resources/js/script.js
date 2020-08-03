@@ -71,14 +71,11 @@ window.onscroll = function scrollLink(){
 function openNav() {
     document.getElementById("sideNav").style.width = "250px";
     document.getElementById("main").style.opacity = "0.5";
-    // document.getElementById("welcome-section").style.marginLeft = "75px";
 }
 
 function closeNav() {
     document.getElementById("sideNav").style.width = "0px";
     document.getElementById("main").style.opacity = "1";
-    // document.getElementById("welcome-section").style.marginLeft = "0px";
-
 }
 
 let closed = true;
