@@ -438,7 +438,7 @@ nav ul li:hover {
 
 
 #container {
-    height: 800vh;
+    height: 1000vh;
     width: 100vw;
     background-image: linear-gradient(rgba(0, 0, 0, 0)85%, rgba(0,0,0,1));
     position: relative;
@@ -543,51 +543,35 @@ figcaption {
 .servicesRow{
     display: flex;
     justify-content: space-between;
-    width: 1100px;
+    width: 100vw;
+    max-width: 1000px;
     margin: 0 auto;
-    min-height: 570px;
-    max-height: 860px;
-    height: calc(100vh - 300px); 
+    min-height: 285px;
+    max-height: 760px;
+    height: calc(100vh - 380px);
     align-items: center;
+    position: relative;
 }
 .servicesColumn {
     display: flex;
     flex-direction: column;
 }
 
-.revealButton {
+.services-figure {
+    width: 220px;
+    text-align: center;
+    position: relative;
     background-color: transparent;
     border: none;
     color: rgb(199, 199, 199);
     font-size: 100%;
     height: 285px;
     cursor: pointer;
-    fill: rgb(199, 199, 199);
-    transition: .2s;
-}
-
-.revealButton.left:hover {
-    transform: translateX(-10px);
-    fill: white;
-    color: white;
-}
-
-.revealButton.right:hover {
-    transform: translateX(10px);
-    fill: white;
-    color: white;
-}
-
-
-.services-figure {
-    width: 220px;
-    text-align: center;
-    position: relative;
-    
+    fill: rgb(199, 199, 199);    
 }
 
 #caption1 {
-    margin-top: 50px;
+    margin-top: 35px;
 }
 #caption2 {
     margin-top: 35px;
@@ -603,18 +587,56 @@ figcaption {
     position: relative;
     top: -10px;
 }
+
+#fig1BG,
+#fig2BG,
+#fig3BG,
+#fig4BG {
+    height: 101px;
+    width: 200px;
+    position: absolute; 
+    top: 10px;  
+    background-color: white; 
+    border-top-right-radius: 8px; 
+    border-top-left-radius: 8px;
+    opacity: 0;  
+}
+
+#fig1BG {
+    background-color: hsla(241, 98%, 21%, 0.795);
+    width: 200px;
+    left: 65px;
+}
+
+#fig2BG {
+    background-color:rgba(39, 0, 65, 0.808);
+    width: 230px;
+    left: 63px;
+}
+
+#fig3BG {
+    background-color:  rgba(59, 0, 0, 0.815);
+    width: 300px;
+    left: 65px; 
+}
+
+#fig4BG {
+   background-color: hsla(113, 100%, 10%, 0.801);
+   left: 115px;
+   width: 300px; 
+}
+
 .caret {
     width: 0;
     height: 0;
     border: 40px solid transparent;
     position: absolute;
-    transition: .4s;
 }
 
 #caret1 {
     border-right-color: hsla(241, 100%, 14%, 0.801);
-    top: 100px; 
-    left: -80px;  
+    top: -100px; 
+    left: 80px;  
 }
 #caret2 {
     border-right-color:rgba(39, 0, 65, 0.808);
@@ -633,22 +655,23 @@ figcaption {
 }
 
 #about-wrapper {
-    width: 585px;
-    height: 570px;
-    position: relative; 
-    left: -10px;   
+    width: 100vw;
+    height: 600px;
+    position: absolute; 
+    left: 0;
+    top: 250px;   
 }
 
 #audio,
 #repair, 
 #lighting,
 #programming {
-    height: 25%;
-    width: 0%;
+    height: 100%;
+    width: 100%;
     transition: .2s;
     overflow: hidden;
-    border-radius: 8px;
     position: absolute;
+    opacity: 0;
 }
 
 #audio,
