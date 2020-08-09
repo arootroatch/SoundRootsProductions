@@ -61,7 +61,7 @@ window.onscroll = function scrollLink(){
         var scrolled = ((scrollPos/height)*100)/1.13;
         fader.style.top = scrolled + "%";
     }
-    removeOutline();
+    // removeOutline();
 
 
 }
@@ -209,13 +209,13 @@ function showProgramming() {
 }
 
 //remove outline when opacity is 0, called in fader onscroll 
-function removeOutline() {
-    for (i=1; i<5; i++) {
-        if (document.getElementById('fig' + i).style.opacity == '0') {
-            document.getElementById('btn' + i).style.outline = 'none';
-        } else {
-            document.getElementById('btn' + i).style.outline = '';
-        }
-    }
+// function removeOutline() {
+//     for (i=1; i<5; i++) {
+//         if (document.getElementById('fig' + i).style.opacity == '0') {
+//             document.getElementById('btn' + i).style.outline = 'none';
+//         } else {
+//             document.getElementById('btn' + i).style.outline = '';
+//         }
+//     }
     
-}
+// }

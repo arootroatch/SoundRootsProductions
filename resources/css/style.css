@@ -12,6 +12,7 @@ html {
     -ms-overflow-style: none;  /*Internet Explorer 10+*/
     color: rgb(199, 199, 199);
     background-color: black;
+    font-size: 20px;
 }
 html::-webkit-scrollbar { /*WebKit */
     width: 0;
@@ -43,7 +44,6 @@ html::-webkit-scrollbar { /*WebKit */
 
 body {
     font-family: 'Titillium', sans-serif;
-    font-size: 150%;
     width: 100vw;
     
 }
@@ -68,7 +68,7 @@ section {
     height: 35px;
     text-align: center;
     box-shadow: 0px 0px 5px 3px #0300b1;
-    font-size: 75%;
+    font-size: 100%;
     color: rgb(199,199,199);
     cursor: pointer;
     /* outline: none; */
@@ -331,7 +331,7 @@ nav ul li:hover {
     
 }
 #welcome-section div {
-    width: 1000px;
+    width: 840px;
     position: absolute;
     top: 75%;
     left: 50%;
@@ -450,8 +450,8 @@ nav ul li:hover {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    padding-top: 10px;
-    min-height: 867px;
+    /* padding-top: 10px; */
+    /* min-height: 867px; */
     height: 100vh;
     background-image: radial-gradient(rgba(0,0,0,.85), rgba(0,0,0,1));
 }
@@ -476,7 +476,7 @@ nav ul li:hover {
 
 #section2 p {
     width: 50%;
-    margin-top: 10px;
+    margin-top: -20px;
     background-color: rgba(0,0,0,0.5);
  
 }
@@ -522,144 +522,118 @@ nav ul li:hover {
 
 /* services */
 
-#services h3{
-    text-align: center;
-    font-family: 'OPTIAgency-Gothic';
-    letter-spacing: 5px;
-    position: relative;
-    top: -40px;
-    font-size: 90%;
-}
 
-figcaption {
-    font-family: 'OPTIAgency-Gothic';
-    letter-spacing: 2px;
-}
 
-[name="hammer-outline"] {
-    font-size: 130px;
-}
 
 .servicesRow{
     display: flex;
     justify-content: space-between;
-    width: 100vw;
+    width: 90vw;
     max-width: 1000px;
-    margin: 0 auto;
-    min-height: 285px;
-    max-height: 760px;
-    height: calc(100vh - 380px);
-    align-items: center;
+    margin: 0 auto; 
     position: relative;
-}
-.servicesColumn {
-    display: flex;
-    flex-direction: column;
+    top: -30px;
+    
 }
 
 .services-figure {
-    width: 220px;
-    text-align: center;
     position: relative;
     background-color: transparent;
     border: none;
     color: rgb(199, 199, 199);
-    font-size: 100%;
-    height: 285px;
-    cursor: pointer;
-    fill: rgb(199, 199, 199);    
+    fill: rgb(199, 199, 199); 
+}
+
+[name="hammer-outline"] {
+    font-size: 58px;
+    display: inline-block;
+    margin-right: 5px;
+}
+.services-figure svg {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+#services h3{
+    font-family: 'OPTIAgency-Gothic';
+    letter-spacing: 3px;
+    position: relative;
+    font-size: 90%;
+    display: inline-block;
+    text-align: center;
 }
 
 #caption1 {
-    margin-top: 35px;
+    top: -7px;
 }
 #caption2 {
-    margin-top: 35px;
+    top: -3px;
 }
 #caption3 {
-    margin-top: 25px;
+    top: -8px;
 }
 #caption4 {
-    margin-top: -5px;
+    top: -20px;
 }
 
 #Capa_1 {
     position: relative;
-    top: -10px;
+    top: -4px;
 }
 
 #fig1BG,
 #fig2BG,
 #fig3BG,
 #fig4BG {
-    height: 101px;
+    height: 100%;
     width: 200px;
     position: absolute; 
-    top: 10px;  
+    top: -10px;  
     background-color: white; 
     border-top-right-radius: 8px; 
     border-top-left-radius: 8px;
-    opacity: 0;  
+    opacity: 0; 
+    z-index: -1; 
 }
 
 #fig1BG {
-    background-color: hsla(241, 98%, 21%, 0.795);
+    background-color: rgba(1, 0, 83, 0.795);
     width: 200px;
-    left: 65px;
+    left: -22px;
 }
 
 #fig2BG {
-    background-color:rgba(39, 0, 65, 0.808);
-    width: 230px;
-    left: 63px;
+    background-color:rgba(34, 1, 56, 0.808);
+    width: 210px;
+    left: -20px;
 }
 
 #fig3BG {
     background-color:  rgba(59, 0, 0, 0.815);
-    width: 300px;
-    left: 65px; 
+    width: 270px;
+    left: -13px; 
 }
 
 #fig4BG {
-   background-color: hsla(113, 100%, 10%, 0.801);
-   left: 115px;
-   width: 300px; 
+   background-color: hsla(113, 100%, 7%, 0.801);
+   left: -19px;
+   width: 260px; 
 }
 
-.caret {
-    width: 0;
-    height: 0;
-    border: 40px solid transparent;
-    position: absolute;
-}
-
-#caret1 {
-    border-right-color: hsla(241, 100%, 14%, 0.801);
-    top: -100px; 
-    left: 80px;  
-}
-#caret2 {
-    border-right-color:rgba(39, 0, 65, 0.808);
-    top: 390px;
-    left: -80px;
-}
-#caret3 {
-    border-left-color: rgba(59, 0, 0, 0.815);
-    top: 100px;
-    right: -80px;
-}
-#caret4 {
-    border-left-color: hsla(113, 100%, 10%, 0.801);
-    top: 390px;
-    right: -80px;
-}
 
 #about-wrapper {
     width: 100vw;
-    height: 650px;
+    height: calc(100vh - 225px);
     position: absolute; 
     left: 0;
-    top: 250px;   
+    top: 221px;  
+}
+
+.coloredRow {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #audio,
@@ -667,33 +641,26 @@ figcaption {
 #lighting,
 #programming {
     height: 100%;
-    width: 100%;
+    width: calc(100% - 155px);
     transition: .2s;
-    overflow: hidden;
+    /* overflow: hidden; */
     position: absolute;
     opacity: 0;
+    padding-right: 105px;
+    padding-left: 50px;
 }
 
-#audio,
-#repair {
-    top: 0;
-}
-
-#lighting,
-#programming {
-    bottom: 0;
-}
 
 #audio p,
 #lighting p,
 #repair p,
 #programming p {
     width: 500px;
-    margin: 20px auto 0 60px;
+    /* margin: 20px auto 0 60px; */
 }
 
 #audio {
-    background-image: radial-gradient(rgba(2, 0, 136, 0.8), rgba(1, 0, 36, 0.8) );
+    background-image: radial-gradient(rgba(3, 1, 143, 0.8), rgba(3, 1, 63, 0.8) );
     left: 0;
 }
 
@@ -712,6 +679,32 @@ figcaption {
     right: 0;
 }
 
+.carousel-cell {
+    width: 100%;
+    height: 300px;
+    text-align: center;
+    overflow: hidden;
+
+}
+
+.carousel-cell img{
+    /* width: 100%; */
+    height: 100%;
+}
+
+.main-carousel {
+    width: 450px;
+    z-index: 1000;
+}
+
+.flickity-page-dots .dot {
+    opacity: 1;
+    background: transparent;
+    border: 2px solid white;
+}
+.flickity-page-dots .dot.is-selected {
+    background: white;
+  }
 
 /* Testimonials */
 
@@ -742,7 +735,6 @@ figcaption {
     position: relative;
     width: calc(100vw - 155px);
     padding-right: 105px;
-    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -753,6 +745,96 @@ figcaption {
     margin-top: 50px;
 }
 
+
+.reviewWrapper{
+    width: 690px;
+    margin: 0;
+}
+
+
+#testimonialsRow {
+    max-width: 1380px;
+    text-align: center;
+    
+}
+
+.blockquote {
+    width: 300px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 10px 5px rgb(0, 0, 168);
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+    vertical-align: top;
+    color: white;
+}
+
+.blockquote cite {
+    margin-right: 10px;
+}
+
+blockquote {
+    width: 230px;
+    font-size: 16px;
+    line-height: 20px;
+    margin-left: 33px; 
+}
+
+
+#quote1 blockquote {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+#quote2 blockquote {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#quote3 blockquote {
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+#quote4 blockquote {
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+#quote1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705)), url(img/emily.jpg);
+    
+}
+
+#quote2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.753)), url(img/ashley.jpg);
+}
+#quote3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.74)), url(img/katie.jpg);
+}
+#quote4 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.74)), url(img/caleb.jpg);
+}
+
+#btnWrapper{
+  text-align: center;
+  margin-top: 30px;
+}
+
+#btnWrapper a {
+    text-decoration: none;
+    color: white;
+    background-color: #1777f2;
+    font-size: 65%;
+    padding: 7px 15px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    position: relative;
+    bottom: 1px;
+    margin-left: 40px;
+}
 
 
 
@@ -816,7 +898,7 @@ textarea {
 }
 
 #submit {
-    font-size: 50%;
+    font-size: 65%;
 
 }
 
@@ -856,7 +938,7 @@ footer ion-icon {
 }
 
 #logo-facebook:hover {
-    color: #0f94f4;
+    color: #1777f2;
 }
 #logo-instagram:hover {
     color: #de3984;
