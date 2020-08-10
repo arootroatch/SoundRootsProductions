@@ -440,7 +440,7 @@ nav ul li:hover {
 
 
 #container {
-    height: 1000vh;
+    height: 600vh;
     width: 100vw;
     background-image: linear-gradient(rgba(0, 0, 0, 0)85%, rgba(0,0,0,1));
     position: relative;
