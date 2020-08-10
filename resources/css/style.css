@@ -49,6 +49,9 @@ body {
 
 section {
     overflow-x: hidden;
+    padding: 50px;
+    padding-right: 105px;
+    width: calc(100vw - 155px);
 }
 
 
@@ -57,9 +60,6 @@ section {
     margin: 0 auto;
 }
 
-section {
-    padding: 50px;
-}
 
 .btn {
     font-family: 'OPTIAgency-Gothic';
@@ -185,9 +185,7 @@ nav button ion-icon {
 
 #main {
     transition: .5s;
-    position: relative;
-    margin-right: 55px;
-    
+    position: relative;    
 }
 
 nav ul {
@@ -318,7 +316,7 @@ nav ul li:hover {
 #welcome-section {
     height: 100vh;
     width: 100vw;
-    background-image: radial-gradient(rgba(0,0,0,0.3) 80%, rgba(0,0,0,0.8)), url("img/Crowdb&w.jpg");
+    background-image: radial-gradient(rgba(0, 0, 0, 0.425) 80%, rgba(0,0,0,0.8)), url("img/Crowdb&w.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -463,7 +461,6 @@ nav ul li:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: calc(100vw - 155px);
     height: 100%;
 
 }
@@ -739,7 +736,6 @@ nav ul li:hover {
 #testimonials {
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/shutterstock_559649956.jpg');
     position: relative;
-    width: calc(100vw - 155px);
     padding-right: 105px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -858,7 +854,6 @@ blockquote {
     background-size: cover;
     background-repeat: no-repeat;
     height: auto;
-    width: calc(100vw - 155px);
     padding-right: 105px;
     position: relative;
    
