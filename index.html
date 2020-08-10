@@ -31,19 +31,19 @@
     <nav id="sideNav">
         <button onclick="closeNav()"><ion-icon name="close-outline"></ion-icon></button>
         <ul>
-            <li><a href="#aboutAnchor" class="navLink">About</a></li>
-            <li><a href="#philosophyAnchor" class="navLink">Our Philosophy</a></li>
-            <li><a href="#" onclick="toggleNestedNav()" class="navLink">Our Services</a></li>
+            <li><a href="#aboutAnchor" class="navLink" onclick="closeNav()">About</a></li>
+            <li><a href="#philosophyAnchor" class="navLink" onclick="closeNav()">Our Philosophy</a></li>
+            <li onclick="toggleNestedNav()" class="navLink">Our Services</li>
             <div id="nestedNav">
                 <ul>
-                    <li><a href="#" class="navLinkInt">Audio Engineering</a></li>
-                    <li><a href="#" class="navLinkInt">DMX Lighting</a></li>
-                    <li><a href="#" class="navLinkInt">Maintenance &amp; <br>Repair</a></li>
-                    <li><a href="#" class="navLinkInt">Programming</a></li>
+                    <li><a href="#" class="navLinkInt" onclick="closeNav()">Audio Engineering</a></li>
+                    <li><a href="#" class="navLinkInt" onclick="closeNav()">DMX Lighting</a></li>
+                    <li><a href="#" class="navLinkInt" onclick="closeNav()">Maintenance &amp; <br>Repair</a></li>
+                    <li><a href="#" class="navLinkInt" onclick="closeNav()">Programming</a></li>
                 </ul>
             </div>
-            <li><a href="#testimonials" class="navLink">Why Sound<br>Roots?</a></li>
-            <li><a href="#contact" class="navLink">Contact Us</a></li>
+            <li><a href="#testimonials" class="navLink" onclick="closeNav()">Why Sound<br>Roots?</a></li>
+            <li><a href="#contact" class="navLink" onclick="closeNav()">Contact Us</a></li>
         </ul>
         <div id="bottomDiv">
             <p style="margin-bottom: 10px; font-size: 90%;"><a class="navLink" href="#top">Back to top</a></p>

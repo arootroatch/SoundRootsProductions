@@ -44,10 +44,12 @@ html::-webkit-scrollbar { /*WebKit */
 
 body {
     font-family: 'Titillium', sans-serif;
-    width: 100vw;
-    
+    width: 100vw;    
 }
 
+section {
+    overflow-x: hidden;
+}
 
 
 .row {
@@ -228,7 +230,7 @@ nav ul li:hover {
     padding: 0;
     background-color: rgb(1, 0, 73);
     width: 250px;
-    margin: -20px 0px 20px -10px;
+    margin: -15px 0px 20px -10px;
     box-shadow: 5px 5px 5px inset rgb(1, 0, 51), -5px -5px 5px inset rgb(1, 0, 49);
     height: 0px;
     overflow: hidden;
@@ -236,7 +238,7 @@ nav ul li:hover {
 }
 
 #nestedNav ul {
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 #nestedNav li {
@@ -450,10 +452,9 @@ nav ul li:hover {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    /* padding-top: 10px; */
-    /* min-height: 867px; */
     height: 100vh;
     background-image: radial-gradient(rgba(0,0,0,.85), rgba(0,0,0,1));
+    overflow: hidden;
 }
 
 
@@ -463,6 +464,7 @@ nav ul li:hover {
     top: 0;
     left: 0;
     width: calc(100vw - 155px);
+    height: 100%;
 
 }
 
@@ -643,7 +645,6 @@ nav ul li:hover {
     height: 100%;
     width: calc(100% - 155px);
     transition: .2s;
-    /* overflow: hidden; */
     position: absolute;
     opacity: 0;
     padding-right: 105px;
@@ -656,7 +657,6 @@ nav ul li:hover {
 #repair p,
 #programming p {
     width: 500px;
-    /* margin: 20px auto 0 60px; */
 }
 
 #audio {
@@ -688,7 +688,6 @@ nav ul li:hover {
 }
 
 .carousel-cell img{
-    /* width: 100%; */
     height: 100%;
 }
 
@@ -870,7 +869,7 @@ blockquote {
 }
 
 #contactForm {
-    width: 800px;
+    width: 80%;
     margin: 0 auto;
     font-family: 'OPTIAgency-Gothic';
     letter-spacing: 3px;
