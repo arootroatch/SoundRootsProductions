@@ -706,6 +706,13 @@ nav ul li:hover {
     background: white;
   }
 
+.flickity-button {
+    background-color: transparent;
+}  
+
+.flickity-button-icon {
+    fill: white;
+}
 /* Testimonials */
 
 
@@ -773,6 +780,7 @@ nav ul li:hover {
 
 .blockquote cite {
     margin-right: 10px;
+    opacity: 0;
 }
 
 blockquote {
@@ -780,6 +788,7 @@ blockquote {
     font-size: 16px;
     line-height: 20px;
     margin-left: 33px; 
+    opacity: 0;
 }
 
 
@@ -820,7 +829,10 @@ blockquote {
 
 #btnWrapper{
   text-align: center;
-  margin-top: 30px;
+  margin: 30px auto 0 auto;
+  width: 400px;
+  position: relative;
+  left: 22px;
 }
 
 #btnWrapper a {
