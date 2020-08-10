@@ -774,7 +774,9 @@ nav ul li:hover {
     margin: 20px;
     text-align: center;
     vertical-align: top;
-    color: white;
+    /* color: white; */
+    box-sizing: border-box;
+    padding: 25px;
 }
 
 .blockquote cite {
@@ -783,47 +785,46 @@ nav ul li:hover {
 }
 
 blockquote {
-    width: 230px;
     font-size: 16px;
-    line-height: 20px;
-    margin-left: 33px; 
+    line-height: 25px;
     opacity: 0;
+    background-color: rgba(0, 0, 0, 0.39);
 }
 
 
 #quote1 blockquote {
-    margin-top: 60px;
+    margin-top: 10px;
     margin-bottom: 30px;
 }
 
 #quote2 blockquote {
-    margin-top: 50px;
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 
 #quote3 blockquote {
-    margin-top: 100px;
-    margin-bottom: 70px;
+    margin-top: 60px;
+    margin-bottom: 80px;
 }
 
 #quote4 blockquote {
-    margin-top: 80px;
+    margin-top:40px;
     margin-bottom: 50px;
 }
 
 #quote1 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.705), rgba(0, 0, 0, 0.705)), url(img/emily.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/emily.jpg);
     
 }
 
 #quote2 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.753)), url(img/ashley.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/ashley.jpg);
 }
 #quote3 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.74)), url(img/katie.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/katie.jpg);
 }
 #quote4 {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.747), rgba(0, 0, 0, 0.74)), url(img/caleb.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(img/caleb.jpg);
 }
 
 #btnWrapper{
