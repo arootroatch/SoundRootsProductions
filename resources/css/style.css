@@ -332,19 +332,21 @@ nav ul li:hover {
     left: 0;
     z-index: -1;
     font-family: 'OPTIAgency-Gothic';
-    letter-spacing: .5em;
+    letter-spacing: .6em;
     text-shadow: 3px 5px 5px rgb(0, 68, 255);
     transition: margin-left .5s;
     
 }
 #welcome-section div {
-    width: 520px;
+    width: 608px;
+    text-align: center;
     position: absolute;
     top: 75%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-54%);
 }
 #welcome-section h1 {
+    font-size: 250%;
     white-space: nowrap;
     overflow: hidden;
     -webkit-animation-name: h1Fade;
@@ -381,7 +383,7 @@ nav ul li:hover {
     height: auto;
     width: 80vw;
     /* min-width: 800px; */
-    max-width: 1100px;
+    max-width: 1000px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -549,12 +551,14 @@ nav ul li:hover {
     border: none;
     color: rgb(199, 199, 199);
     fill: rgb(199, 199, 199); 
+    opacity: 0;
 }
 
 [name="hammer-outline"] {
     font-size: 58px;
     display: inline-block;
     margin-right: 5px;
+    
 }
 .services-figure svg {
     display: inline-block;
