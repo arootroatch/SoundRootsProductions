@@ -28,11 +28,81 @@
         /* height: 5px; */
         right: 30px;
     }
+    #curator-feed-default-feed-layout {
+        max-width: 350px;
+        min-width: 300px;
+        font-size: 80%;
+        margin-top: 30px;
+    }
+    
     .services-figure {
         position: absolute;
         /* left: 0; */
     }
+    #welcome-section h1 {
+        font-size: 200%;
+    }
+    #welcome-section div{
+        width: 540px;
+    }
 
+
+}
+
+/* where everything switches to normal scrolling  */
+@media only screen and (max-width: 685px) { 
+    #welcome-section h1 {
+        font-size: 150%;
+    }
+    #sticky {
+        height: 600vh;
+        position: relative;
+    }
+    #sticky section {
+        position: relative;
+        height: auto;
+        overflow: visible;
+    }
+    #section2 {
+        margin-top: 60vh;
+    }
+
+    #philosophy {
+        margin-top: 40vh;
+    }
+   
+}
+
+@media only screen and (max-width: 580px) {
+    #welcome-section h1 {
+        white-space: normal;
+        animation-name: none;
+    }
+    #welcome-section div {
+        width: 250px;
+        text-align: start;
+    }
+    #yourVision {
+        white-space: nowrap;
+        animation-name: h1Fade;
+        animation-delay: 4s;
+        animation-fill-mode: backwards;
+        animation-duration: .5s;
+        animation-timing-function: linear;
+        overflow: hidden;
+        display: inline-block;
+
+    }
+    #delivered {
+        animation-name: h1Fade;
+        animation-delay: 4.5s;
+        animation-fill-mode: backwards;
+        animation-duration: .5s;
+        animation-timing-function: linear;
+        overflow: hidden;
+        display: inline-block;
+        margin-left: 30px;
+    }
 }
 
 
