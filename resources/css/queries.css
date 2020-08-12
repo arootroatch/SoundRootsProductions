@@ -3,3 +3,44 @@
         max-width: 1000px;
     }
 }
+
+@media only screen and (max-width: 973px) {
+    #section2-row {
+        flex-direction: column;
+    }
+    #curator-feed-default-feed-layout {
+        width: 50%;
+        font-size: 80%;
+    }
+    #section2 p {
+        width: 80%;
+        max-width: 685px;
+    }
+  
+
+}
+
+
+
+@media only screen and (max-width: 965px) {
+    .servicesRow {
+        justify-content: center;
+        /* height: 5px; */
+        right: 30px;
+    }
+    .services-figure {
+        position: absolute;
+        /* left: 0; */
+    }
+
+}
+
+
+
+@media only screen and (max-height: 444px) {
+    #bottomDiv {
+        position: relative;
+        top: 0;
+    }
+    
+}

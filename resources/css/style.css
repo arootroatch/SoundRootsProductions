@@ -18,6 +18,12 @@ html::-webkit-scrollbar { /*WebKit */
     width: 0;
     height: 0;
 } 
+body::-webkit-scrollbar { /*WebKit */
+    width: 0;
+    height: 0;
+} 
+
+
 
 @font-face {
     font-family: 'OPTIAgency-Gothic';
@@ -167,6 +173,7 @@ h2::after{
     width: 0px;
     background-image: radial-gradient(rgb(3, 0, 151), rgb(1, 0, 36));
     overflow-x: hidden;
+    overflow-y: scroll;
     transition: .2s;
     z-index: 2;
 }
@@ -331,7 +338,7 @@ nav ul li:hover {
     
 }
 #welcome-section div {
-    width: 840px;
+    width: 520px;
     position: absolute;
     top: 75%;
     left: 50%;
@@ -372,9 +379,9 @@ nav ul li:hover {
 
 #logo {
     height: auto;
-    width: 55vw;
-    min-width: 800px;
-    max-width: 1200px;
+    width: 80vw;
+    /* min-width: 800px; */
+    max-width: 1100px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -513,6 +520,7 @@ nav ul li:hover {
 }
 
 #philosophy p {
+    max-width: 685px;
     letter-spacing: 2px;
     text-align: justify;
     background-color: rgba(0,0,0,0.5);
@@ -584,7 +592,7 @@ nav ul li:hover {
 #fig2BG,
 #fig3BG,
 #fig4BG {
-    height: 100%;
+    height: 80px;
     width: 200px;
     position: absolute; 
     top: -10px;  
@@ -691,6 +699,16 @@ nav ul li:hover {
 .main-carousel {
     width: 450px;
     z-index: 1000;
+}
+
+#audio .main-carousel,
+#repair .main-carousel {
+    margin-left: 50px;
+}
+
+#lighting .main-carousel,
+#programming .main-carousel {
+    margin-right: 50px;
 }
 
 .flickity-page-dots .dot {
@@ -826,9 +844,9 @@ blockquote {
 #btnWrapper{
   text-align: center;
   margin: 30px auto 0 auto;
-  width: 400px;
+  width: 600px;
   position: relative;
-  left: 22px;
+  left: 0px;
 }
 
 #btnWrapper a {
@@ -866,6 +884,7 @@ blockquote {
 
 #contactForm {
     width: 80%;
+    max-width: 800px;
     margin: 0 auto;
     font-family: 'OPTIAgency-Gothic';
     letter-spacing: 3px;
@@ -913,10 +932,10 @@ textarea {
 /* footer  */
 
 footer {
-    padding-top: 20px;
+    padding: 20px 50px;
     font-size: 65%;
     height: 100px;
-    width: 100vw;
+    width: calc(100vw - 100px);
     background-color: black;
     color: rgb(153, 153, 153);
 }
