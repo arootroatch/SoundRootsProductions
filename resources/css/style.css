@@ -554,6 +554,11 @@ nav ul li:hover {
     opacity: 0;
 }
 
+.small {
+    display: none;
+}
+
+
 [name="hammer-outline"] {
     font-size: 58px;
     display: inline-block;
@@ -597,10 +602,8 @@ nav ul li:hover {
 #fig3BG,
 #fig4BG {
     height: 80px;
-    width: 200px;
     position: absolute; 
     top: -10px;  
-    background-color: white; 
     border-top-right-radius: 8px; 
     border-top-left-radius: 8px;
     opacity: 0; 

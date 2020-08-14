@@ -54,8 +54,11 @@
     #welcome-section h1 {
         font-size: 150%;
     }
+    #container {
+        height: 800vh;
+    }
     #sticky {
-        height: 600vh;
+        height: 800vh;
         position: relative;
     }
     #sticky section {
@@ -70,6 +73,43 @@
     #philosophy {
         margin-top: 40vh;
     }
+    #audio,
+    #repair, 
+    #lighting,
+    #programming {
+        position: relative;
+        height: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .coloredRow {
+        flex-direction: column;
+    }
+    #about-wrapper {
+        height: 2000px;
+    }
+    .servicesRow {
+        display: none;
+    }
+    .small {
+        display: block;
+        opacity: 1;
+    }
+    .services-figure {
+        display: inline-block;
+        left: 50%;
+        position: relative;
+        transform: translateX(-50%);
+    }
+    #fig1BG,
+    #fig2BG,
+    #fig3BG,
+    #fig4BG {
+        opacity: 1;
+    }
+    
+    
    
 }
 
