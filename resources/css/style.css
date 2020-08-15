@@ -50,7 +50,7 @@ body::-webkit-scrollbar { /*WebKit */
 
 body {
     font-family: 'Titillium', sans-serif;
-    width: 100vw;    
+    width: 100vw;  
 }
 
 section {
@@ -335,7 +335,7 @@ nav ul li:hover {
     letter-spacing: .6em;
     text-shadow: 3px 5px 5px rgb(0, 68, 255);
     transition: margin-left .5s;
-    
+    overflow: hidden;
 }
 #welcome-section div {
     width: 608px;
@@ -867,6 +867,7 @@ blockquote {
     position: relative;
     bottom: 1px;
     margin-left: 40px;
+    display: inline-block;
 }
 
 
@@ -890,7 +891,7 @@ blockquote {
 }
 
 #contactForm {
-    width: 80%;
+    width: 100%;
     max-width: 800px;
     margin: 0 auto;
     font-family: 'OPTIAgency-Gothic';

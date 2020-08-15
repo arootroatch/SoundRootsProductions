@@ -51,14 +51,27 @@
 
 /* where everything switches to normal scrolling  */
 @media only screen and (max-width: 685px) { 
+    body {
+        overflow-x: hidden;
+        /* to prevent excess scrolling on mobile */
+    }
+    #scrollbar {
+        display: none;
+    }
+    section{
+        padding-right: 50px;
+        width: calc(100vw - 100px);
+        margin-bottom: 50px;
+    }
+
     #welcome-section h1 {
         font-size: 150%;
     }
     #container {
-        height: 800vh;
+        height: auto;
     }
     #sticky {
-        height: 800vh;
+        height: auto;
         position: relative;
     }
     #sticky section {
@@ -66,28 +79,59 @@
         height: auto;
         overflow: visible;
     }
+
     #section2 {
-        margin-top: 60vh;
+        margin-top: 45vh;
+    }
+    #section2-row {
+        height: auto;
+        max-height: none;
+    }
+    #curator-feed-default-feed-layout {
+        max-width: 350px;
+        width: 100%;
+        min-width: 300px;
+        font-size: 80%;
+        margin-top: 30px;
     }
 
-    #philosophy {
-        margin-top: 40vh;
-    }
     #audio,
     #repair, 
     #lighting,
     #programming {
         position: relative;
         height: auto;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding: 50px;
+        width: calc(100vw - 100px);
+        margin-bottom: 30px;
     }
 
     .coloredRow {
+        height: auto;
+        align-content: space-between;
+        margin: 0 auto;
+    }
+    
+    #audio .main-carousel,
+    #repair .main-carousel, 
+    #lighting .main-carousel,
+    #programming .main-carousel {
+        margin: 35px auto;
+    }      
+
+    #audio .coloredRow,
+    #repair .coloredRow {
         flex-direction: column;
     }
+    #lighting .coloredRow,
+    #programming .coloredRow {
+        flex-direction: column-reverse;
+    }
     #about-wrapper {
-        height: 2000px;
+        position: relative;
+        height: auto;
+        left: -50px;
+        top: 0;
     }
     .servicesRow {
         display: none;
@@ -107,9 +151,38 @@
     #fig3BG,
     #fig4BG {
         opacity: 1;
+
     }
-    
-    
+
+    #fig1BG {
+        top: -18px;
+    }
+
+    #fig3BG {
+        top: -14px;
+    }
+
+    #fig4 {
+        position: relative;
+        top: 10px;
+    }
+
+    #fig2 {
+        position: relative;
+        top: -8px;
+    }
+
+    #btnWrapper {
+        width: 400px;
+    }
+    #btnWrapper a {
+        margin: 20px auto 0 auto;
+    }
+
+    #testimonials, 
+    #contact {
+        margin-bottom: 0;
+    }
    
 }
 
