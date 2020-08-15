@@ -704,7 +704,8 @@ nav ul li:hover {
 }
 
 .main-carousel {
-    width: 450px;
+    max-width: 450px;
+    width: 100%;
     z-index: 1000;
 }
 

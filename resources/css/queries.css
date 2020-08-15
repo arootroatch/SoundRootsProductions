@@ -81,11 +81,14 @@
     }
 
     #section2 {
-        margin-top: 45vh;
+        margin-top: 70vh;
     }
     #section2-row {
         height: auto;
         max-height: none;
+    }
+    #section2 p {
+        width: auto;
     }
     #curator-feed-default-feed-layout {
         max-width: 350px;
@@ -104,6 +107,12 @@
         padding: 50px;
         width: calc(100vw - 100px);
         margin-bottom: 30px;
+    }
+    #audio p,
+    #lighting p,
+    #repair p,
+    #programming p {
+        width: auto;
     }
 
     .coloredRow {
@@ -218,8 +227,42 @@
     }
 }
 
+@media only screen and (max-width: 449px) {
+    section,
+    #testimonials, 
+    #contact, 
+    footer {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: calc(100vw - 20px);
+    }
+    #testimonials h2 {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media only screen and (max-width: 401px) {
+    
+    #testimonials h2 {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #btnWrapper {
+        width: auto;
+    }
+}
 
 
+
+@media only screen and (max-height: 601px) {
+    #bottomDiv {
+        position: relative;
+        top: 75px;
+    }
+    
+}
 @media only screen and (max-height: 444px) {
     #bottomDiv {
         position: relative;
