@@ -1,8 +1,6 @@
 removeAnchors();
-console.log(window.innerWidth);
-console.log(document.getElementById('largeAnchors').innerHTML);
 window.addEventListener("resize", function() {
-    lax.updateElements()
+    lax.updateElements();
     removeAnchors();
 });
 
@@ -65,10 +63,18 @@ window.onscroll = function scrollLink(){
         var scrolled = ((scrollPos/height)*100)/1.13;
         fader.style.top = scrolled + "%";
     }
-    // removeOutline();
-
-
+    //change opacity of container
+    if (document.documentElement.clientWidth <= 685) {
+        var scrollPos = document.documentElement.scrollTop;
+        var vpHeight = document.documentElement.clientHeight;
+        var scrollPer = (scrollPos/vpHeight)*2;
+        if (scrollPer >= 1){
+            scrollPer = 1;
+        }
+        document.getElementById('container').style.opacity = scrollPer;
+    }
 }
+
 
 //anchorDiv 
 function removeAnchors() {

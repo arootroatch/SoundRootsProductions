@@ -36,12 +36,6 @@ body::-webkit-scrollbar { /*WebKit */
 }
 
 @font-face {
-    font-family: 'MixBox Stamp Italic';
-    src: url('MixBox/Mixbox Stamp Italic Demo.otf');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
     font-family: "Titillium";
     src: url('Titillium_Web/TitilliumWeb-Regular.ttf');
     font-weight: normal;
@@ -463,6 +457,7 @@ nav ul li:hover {
     width: 100vw;
     background-image: linear-gradient(rgba(0, 0, 0, 0)85%, rgba(0,0,0,1));
     position: relative;
+    opacity: 0;
 }
 
 
