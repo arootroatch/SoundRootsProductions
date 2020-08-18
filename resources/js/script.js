@@ -1,5 +1,9 @@
+removeAnchors();
+console.log(window.innerWidth);
+console.log(document.getElementById('largeAnchors').innerHTML);
 window.addEventListener("resize", function() {
-	lax.updateElements()
+    lax.updateElements()
+    removeAnchors();
 });
 
 
@@ -64,6 +68,22 @@ window.onscroll = function scrollLink(){
     // removeOutline();
 
 
+}
+
+//anchorDiv 
+function removeAnchors() {
+    if(window.innerWidth <= 685) {
+        document.getElementById("largeAnchors").innerHTML = " ";
+    } else {
+        if(document.getElementById("largeAnchors").innerHTML === " "){
+            document.getElementById("largeAnchors").innerHTML = `<a href="#" id="aboutAnchor"></a>
+            <a href="#" id="philosophyAnchor"></a>
+            <a href="#" id="audioAnchor"></a>
+            <a href="#" id="lightingAnchor"></a>
+            <a href="#" id="repairAnchor"></a>
+            <a href="#" id="programmingAnchor"></a>`
+        } 
+    }
 }
 
 //side nav 

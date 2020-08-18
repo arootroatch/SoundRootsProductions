@@ -51,6 +51,19 @@
 
 /* where everything switches to normal scrolling  */
 @media only screen and (max-width: 685px) { 
+    html {
+        scrollbar-width: auto; /*Firefox*/
+        -ms-overflow-style: auto;  /*Internet Explorer 10+*/
+    }
+    html::-webkit-scrollbar { /*WebKit */
+        width: auto;
+        height: auto;
+    } 
+    body::-webkit-scrollbar { /*WebKit */
+        width: auto;
+        height: auto;
+    } 
+
     body {
         overflow-x: hidden;
         /* to prevent excess scrolling on mobile */
@@ -58,11 +71,33 @@
     #scrollbar {
         display: none;
     }
+
     section{
         padding-right: 50px;
         width: calc(100vw - 100px);
         margin-bottom: 50px;
     }
+    
+    #aboutAnchor {
+        position: absolute;
+        top: 60vh;
+    }
+    
+    #philosophyAnchor {
+        position: absolute;
+        top: 0vh;
+    }
+    
+    #audioAnchor {
+        top: -230px;
+    }
+    #lightingAnchor, 
+    #repairAnchor, 
+    #programmingAnchor  {
+        top: -120px;
+    }
+    
+      
 
     #welcome-section h1 {
         font-size: 150%;
@@ -93,9 +128,12 @@
     #curator-feed-default-feed-layout {
         max-width: 350px;
         width: 100%;
-        min-width: 300px;
+        /* min-width: 300px; */
         font-size: 80%;
-        margin-top: 30px;
+        margin: 30px auto 0 auto;
+    }
+    #services {
+        margin-bottom: 0;
     }
 
     #audio,
@@ -106,7 +144,7 @@
         height: auto;
         padding: 50px;
         width: calc(100vw - 100px);
-        margin-bottom: 30px;
+        margin-bottom: 50px;
     }
     #audio p,
     #lighting p,
@@ -192,6 +230,10 @@
     #contact {
         margin-bottom: 0;
     }
+    #contactForm, 
+    .form-group {
+        width: calc(100% - 20px);
+    }
    
 }
 
@@ -228,6 +270,11 @@
 }
 
 @media only screen and (max-width: 449px) {
+    #menuBtn {
+        transform: scale(0.75);
+        left: 0px;
+        top: 0px;
+    }
     section,
     #testimonials, 
     #contact, 
@@ -241,6 +288,22 @@
         margin-left: auto;
         margin-right: auto;
     }
+    #about-wrapper {
+        left: -10px;
+    }
+    #audio,
+    #repair,
+    #lighting,
+    #programming {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: calc(100vw - 20px);
+    }
+    .blockquote {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
 }
 @media only screen and (max-width: 401px) {
     
@@ -251,6 +314,22 @@
     }
     #btnWrapper {
         width: auto;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .blockquote {
+        width: 100%;
+        height: auto;
+    }
+    #testimonials h2 {
+        width: 200px;
+    }
+    #philosophy div {
+        height: auto;
+    }
+    #philosophy h2 {
+        font-size: 180%;
     }
 }
 

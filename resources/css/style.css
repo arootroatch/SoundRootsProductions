@@ -102,17 +102,29 @@ section {
 
 #aboutAnchor {
     position: absolute;
-    top: 230vh;
+    top: 61vh;
 }
 
 #philosophyAnchor {
     position: absolute;
-    top: 405vh;
+    top: 161vh;
 }
 
-#servicesAnchor {
+#audioAnchor {
     position: absolute;
-    top: 590vh;
+    top: 321vh;
+}
+#lightingAnchor {
+    position: absolute;
+    top: 361vh;
+}
+#repairAnchor {
+    position: absolute;
+    top: 411vh;
+}
+#programmingAnchor {
+    position: absolute;
+    top: 471vh;
 }
 
 /* noscript */
@@ -470,7 +482,7 @@ nav ul li:hover {
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
+    height: calc(100% - 100px);
 
 }
 
@@ -504,6 +516,7 @@ nav ul li:hover {
 #curator-feed-default-feed-layout {
     width: 38%;
     font-size: 80%;
+    height: auto;
 }
 
 .crt-logo, .crt-tag {
@@ -552,6 +565,7 @@ nav ul li:hover {
     color: rgb(199, 199, 199);
     fill: rgb(199, 199, 199); 
     opacity: 0;
+    white-space: nowrap;
 }
 
 .small {
