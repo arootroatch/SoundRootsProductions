@@ -133,6 +133,9 @@
         font-size: 80%;
         margin: 30px auto 0 auto;
     }
+    #philosophy div {
+        height: auto;
+    }
     #services {
         margin-bottom: 0;
     }
@@ -331,9 +334,7 @@
     #testimonials h2 {
         width: 200px;
     }
-    #philosophy div {
-        height: auto;
-    }
+  
     #philosophy h2 {
         font-size: 180%;
     }
