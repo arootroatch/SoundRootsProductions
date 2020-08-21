@@ -37,8 +37,6 @@ fader.onmousedown = function(event) {
         var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         var scrollPos = newTopPer*height;
         document.documentElement.scrollTop = scrollPos;
-        console.log(document.documentElement.scrollTop);
-
     }
     moveAt(event.clientY);
 

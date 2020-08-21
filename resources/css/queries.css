@@ -102,6 +102,10 @@
 
     #welcome-section h1 {
         font-size: 150%;
+        animation: none;
+    }
+    #logo {
+        animation: none;
     }
     #container {
         height: auto;
@@ -133,6 +137,11 @@
         font-size: 80%;
         margin: 30px auto 0 auto;
     }
+
+    #philosophy {
+        background-color: rgba(0, 0, 80, 0.5);
+    }
+
     #philosophy div {
         height: auto;
     }
