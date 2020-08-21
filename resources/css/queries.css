@@ -23,11 +23,7 @@
 
 
 @media only screen and (max-width: 965px) {
-    .servicesRow {
-        justify-content: center;
-        /* height: 5px; */
-        right: 30px;
-    }
+   
     #curator-feed-default-feed-layout {
         max-width: 350px;
         min-width: 300px;
@@ -37,7 +33,16 @@
     
     .services-figure {
         position: absolute;
-        /* left: 0; */
+    }
+    #fig1,
+    #fig2 {
+       left: 37%; 
+    }
+    #fig3 {
+        left: 33%;
+    }
+    #fig4 {
+        left: 34%;
     }
     #welcome-section h1 {
         font-size: 200%;
