@@ -34,6 +34,20 @@
     .servicesRow {
         justify-items: center;
     }
+    .coloredRow {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 650px;
+        align-items: center;
+    }
+    #audio p,
+    #lighting p,
+    #repair p,
+    #programming p {
+        width: 80%;
+        max-width: 685px;
+        
+    }
     
     .services-figure {
         position: absolute;
@@ -235,6 +249,10 @@
 
     #fig3BG {
         top: -14px;
+        left: -10px;
+    }
+    #fig4BG{
+        left: -14px;
     }
 
     #fig4 {

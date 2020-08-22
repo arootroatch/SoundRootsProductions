@@ -45,8 +45,8 @@ body::-webkit-scrollbar { /*WebKit */
 body {
     font-family: 'Titillium', sans-serif;
     width: 100vw;  
-    overscroll-behavior: none;
-    height: auto;
+    -ms-scroll-chaining: none;  
+        overscroll-behavior: none;
 
 }
 
@@ -625,26 +625,26 @@ nav ul li:hover {
 
 #fig1BG {
     background-color: rgba(1, 0, 83, 0.795);
-    width: 200px;
+    width: 210px;
     left: -22px;
 }
 
 #fig2BG {
     background-color:rgba(34, 1, 56, 0.808);
-    width: 210px;
+    width: 220px;
     left: -20px;
 }
 
 #fig3BG {
     background-color:  rgba(59, 0, 0, 0.815);
-    width: 270px;
+    width: 280px;
     left: -13px; 
 }
 
 #fig4BG {
    background-color: hsla(113, 100%, 7%, 0.801);
    left: -19px;
-   width: 260px; 
+   width: 270px; 
 }
 
 
@@ -658,9 +658,10 @@ nav ul li:hover {
 
 .coloredRow {
     height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 #audio,
@@ -668,11 +669,11 @@ nav ul li:hover {
 #lighting,
 #programming {
     height: 100%;
-    width: calc(100% - 155px);
+    width: calc(100% - 105px);
     transition: .2s;
     position: absolute;
     opacity: 0;
-    padding-right: 105px;
+    padding-right: 55px;
     padding-left: 50px;
 }
 
@@ -991,4 +992,15 @@ footer ion-icon {
 }
 #logo-instagram:hover {
     color: #de3984;
+}
+
+/* hide background from mobile overscroll */
+#hideBleed {
+    background-color: black;
+    width: 100vw;
+    height: 50vh;
+    z-index: -1;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
