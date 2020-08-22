@@ -46,6 +46,7 @@ body {
     font-family: 'Titillium', sans-serif;
     width: 100vw;  
     overscroll-behavior: none;
+    height: auto;
 
 }
 
@@ -262,7 +263,7 @@ nav ul li:hover {
 
 #bottomDiv {
     position: absolute;
-    bottom: 20px;
+    bottom: 80px;
     right: 20px;
     text-align: right;
     white-space: nowrap;
