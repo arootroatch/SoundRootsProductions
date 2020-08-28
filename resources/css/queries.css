@@ -206,14 +206,6 @@
         margin: 35px auto;
     }      
 
-    #audio .coloredRow,
-    #repair .coloredRow {
-        flex-direction: column;
-    }
-    #lighting .coloredRow,
-    #programming .coloredRow {
-        flex-direction: column-reverse;
-    }
     #about-wrapper {
         position: relative;
         height: auto;
