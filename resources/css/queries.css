@@ -8,9 +8,11 @@
     #section2-row {
         flex-direction: column;
     }
-    #curator-feed-default-feed-layout {
+    #curatorContainer{
+        margin-top: 20px;
         width: 50%;
-        font-size: 80%;
+        max-width: 350px;
+        min-width: 300px;
     }
     #section2 p {
         width: 80%;
@@ -25,11 +27,10 @@
 @media only screen and (max-width: 965px) {
    
     #curator-feed-default-feed-layout {
-        max-width: 350px;
-        min-width: 300px;
         font-size: 80%;
         margin-top: 30px;
     }
+    
 
     .servicesRow {
         justify-items: center;
@@ -159,7 +160,6 @@
     #curator-feed-default-feed-layout {
         max-width: 350px;
         width: 100%;
-        /* min-width: 300px; */
         font-size: 80%;
         margin: 30px auto 0 auto;
     }
@@ -370,6 +370,11 @@
   
     #philosophy h2 {
         font-size: 180%;
+    }
+    #curatorContainer {
+        width: 100%;
+        min-width: auto;
+        max-width: auto;
     }
 }
 
