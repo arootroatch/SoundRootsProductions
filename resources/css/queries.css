@@ -76,7 +76,7 @@
 
 /* where everything switches to normal scrolling  */
 @media only screen and (max-width: 685px) { 
-    html {
+     html {
         scrollbar-width: auto; /*Firefox*/
         -ms-overflow-style: auto;  /*Internet Explorer 10+*/
     }

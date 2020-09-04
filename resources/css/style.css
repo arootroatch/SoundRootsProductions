@@ -493,9 +493,9 @@ nav ul li:hover {
 
 }
 
-#section2 p {
+#aboutBlurb {
     width: 50%;
-    margin-top: -20px;
+    /* margin-top: -10px; */
     background-color: rgba(0,0,0,0.5);
  
 }
@@ -503,19 +503,25 @@ nav ul li:hover {
 #section2-row {
     display: flex;
     justify-content: space-between;
-    min-height: 405px;
+    min-height: 350px;
     height: calc(100vh - 300px);
     max-height: 820px;
-    align-items: center;
+    align-items: center; 
+}
 
-   
-   
+#curatorContainer {
+    width: 35%;
+    height: 400px;
+    text-align: center;
+}
+
+#callInsta {
+    margin-bottom: 10px;
 }
 
 #curator-feed-default-feed-layout {
-    width: 38%;
     font-size: 80%;
-    height: 600px;
+    z-index: 1000;
     overflow: hidden;
 }
 
@@ -1003,4 +1009,5 @@ footer ion-icon {
     position: fixed;
     bottom: 0;
     left: 0;
+    opacity: 0;
 }
