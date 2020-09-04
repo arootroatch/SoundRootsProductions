@@ -7,38 +7,25 @@
 @media only screen and (max-width: 973px) {
     #section2-row {
         flex-direction: column;
+        height: auto;
     }
     #curatorContainer{
         margin-top: 20px;
         width: 50%;
         max-width: 350px;
-        min-width: 300px;
+        min-width: 316px;
     }
     #section2 p {
         width: 80%;
         max-width: 685px;
     }
-  
-
-}
-
-
-
-@media only screen and (max-width: 965px) {
-   
-    #curator-feed-default-feed-layout {
-        font-size: 80%;
-        margin-top: 30px;
-    }
-    
-
     .servicesRow {
         justify-items: center;
     }
     .coloredRow {
         flex-direction: column;
         justify-content: space-around;
-        height: 650px;
+        /* height: 650px; */
         align-items: center;
     }
     #audio p,
@@ -65,6 +52,20 @@
     #fig4 {
         left: calc(50% - 150px)
     }
+  
+
+}
+
+
+
+@media only screen and (max-width: 965px) {
+   
+    #curator-feed-default-feed-layout {
+        font-size: 80%;
+    }
+    
+
+    
     #welcome-section h1 {
         font-size: 200%;
     }
@@ -76,8 +77,8 @@
 }
 
 /* where everything switches to normal scrolling  */
-@media only screen and (max-width: 685px) { 
-     html {
+@media only screen and (max-width: 685px){
+    html {
         scrollbar-width: auto; /*Firefox*/
         -ms-overflow-style: auto;  /*Internet Explorer 10+*/
     }
@@ -89,14 +90,20 @@
         width: auto;
         height: auto;
     } 
+    #scrollbar {
+        display: none;
+    }
+    #section2 p {
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 685px), only screen and (max-width: 973px) and (max-height: 830px) { 
 
     body {
         overflow-x: hidden;
         
         /* to prevent excess scrolling on mobile */
-    }
-    #scrollbar {
-        display: none;
     }
 
     section{
@@ -154,9 +161,7 @@
         height: auto;
         max-height: none;
     }
-    #section2 p {
-        width: auto;
-    }
+    
     #curator-feed-default-feed-layout {
         max-width: 350px;
         width: 100%;

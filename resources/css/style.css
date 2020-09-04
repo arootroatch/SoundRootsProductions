@@ -51,7 +51,7 @@ body {
 }
 
 section {
-    overflow-x: hidden;
+    overflow: hidden;
     padding: 50px;
     padding-right: 105px;
     width: calc(100vw - 155px);

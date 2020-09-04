@@ -1,6 +1,8 @@
 removeAnchors();
+toggleLax();
 window.addEventListener("resize", function() {
     removeAnchors();
+    toggleLax();
     lax.updateElements();
 });
 
@@ -125,3 +127,18 @@ function toggleNestedNav(){
     i.src = "https://cdn.curator.io/published/5c45e6ba-7cbc-48d2-be74-39dd75a45ccd.js";
     e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
 })();
+
+//toggle lax 
+function toggleLax() {
+   let laxArray = document.getElementsByClassName("toggle");
+   if(window.innerWidth<=973 && window.innerHeight<=830){
+       for (let i=0; i<laxArray.length; i++){
+           laxArray[i].classList.remove('lax');
+           laxArray[i].style.opacity = 1;
+       }
+   } else {
+        for (let i=0; i<laxArray.length; i++){
+            laxArray[i].classList.add('lax');
+        }
+   }
+}
