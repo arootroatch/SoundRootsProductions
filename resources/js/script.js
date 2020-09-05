@@ -1,5 +1,5 @@
 let laxContext;
-if(window.innerWidth<=973 && window.innerHeight<=830) {
+if(window.innerWidth<=973 && document.documentElement.clientHeight<=830) {
     laxContext = 'disabled';
 } else {
     laxContext = 'enabled';
@@ -139,7 +139,7 @@ function toggleNestedNav(){
 function toggleLax() {
    let laxArray = document.getElementsByClassName("toggle");
    
-   if(window.innerWidth<=973 && window.innerHeight<=830){
+   if(window.innerWidth<=973 && document.documentElement.clientHeight<=830){
        for (let i=0; i<laxArray.length; i++){
            if (laxArray[i].classList.contains('lax')){
                 laxArray[i].classList.remove('lax');
