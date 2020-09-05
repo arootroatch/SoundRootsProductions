@@ -87,7 +87,7 @@ window.onscroll = function scrollLink(){
 
 //anchorDiv 
 function removeAnchors() {
-    if(window.innerWidth <= 685) {
+    if(window.innerWidth <= 685 || laxContext=='disabled') {
         document.getElementById("largeAnchors").innerHTML = " ";
     } else {
         if(document.getElementById("largeAnchors").innerHTML === " "){
