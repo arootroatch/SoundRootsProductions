@@ -23,7 +23,9 @@ var fader = document.getElementById('scrollthumb');
 
 
 //click and drag
-fader.onmousedown = function(event) {
+fader.onmousedown = pickup;
+fader.ontouchstart = pickup;
+function pickup(event) {
     enabled = 'no';
     // document.body.append(fader);
     function moveAt(clientY) {
@@ -53,8 +55,13 @@ fader.onmousedown = function(event) {
         moveAt(event.clientY);
     }
     document.addEventListener('mousemove', onMouseMove);
-    document.onmouseup = function() {
+    document.addEventListener('touchmove', onMouseMove);
+    document.onmouseup = dropIt;
+    document.ontouchend = dropIt;
+    function dropIt() {
         document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('touchmove', onMouseMove);
+        fader.ontouchend = null;
         fader.onmouseup = null;
         enabled = 'yes';
     }
