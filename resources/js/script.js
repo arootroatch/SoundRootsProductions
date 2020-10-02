@@ -61,12 +61,12 @@ function pickup(event) {
 fader.addEventListener('touchstart', touchPickup, false);
 function touchPickup(event) {
     enabled = 'no';
-    let startPos = event.clientY;
+    let startPos = event.targetTouches[0].clientY;
     let faderStart = fader.offsetTop;
    
-    function moveAt(event) {
+    function moveAt(touchEvent) {
         let bottomEdge = faderPath.offsetHeight - fader.offsetHeight;
-        let dragDist = event.clientY - startPos; 
+        let dragDist = touchEvent.targetTouches[0].clientY - startPos; 
         let newTop = faderStart + dragDist;
               
         //restrains fader in track
