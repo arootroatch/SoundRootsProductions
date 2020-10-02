@@ -70,14 +70,18 @@ function touchPickup(event) {
     function moveAt(clientY) {
         // fader.style.left = pageX - fader.offsetWidth / 2 + 'px';
         let bottomEdge = faderPath.offsetHeight - fader.offsetHeight;
-        let newTop = clientY - fader.offsetHeight/.8;        
+        let delta = clientY - fader.offsetHeight/.8; 
+        let newTop;
+              
         //restrains fader in track
-        if(newTop<0){
+        if(delta<0){
             newTop=0;
-        }
-        if(newTop>bottomEdge){
+        } else if(delta>bottomEdge){
             newTop = bottomEdge;
+        } else {
+            newTop = delta;
         }
+        console.log(newTop); 
 
         //sets new position
         fader.style.top = `${newTop}px`;
