@@ -112,8 +112,8 @@ fader.ondragstart = function() {
 }
 
 //make fader move with window scrolling
-
-window.onscroll = function scrollLink(){
+window.addEventListener('scroll', scrollLink, false);
+function scrollLink(){
     if(enabled == 'yes') {
         var scrollPos = document.documentElement.scrollTop;
         var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
