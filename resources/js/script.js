@@ -21,21 +21,21 @@ var enabled = 'yes';
 var faderPath = document.getElementById('scrolltrack');
 var fader = document.getElementById('scrollthumb');
 
-
 //click and drag
 fader.addEventListener('mousedown', pickup, false);
 function pickup(event) {
     enabled = 'no';
-    // document.body.append(fader);
-    function moveAt(clientY) {
-        // fader.style.left = pageX - fader.offsetWidth / 2 + 'px';
+    let startPos = event.clientY;
+    let faderStart = fader.offsetTop;
+    
+    function moveAt(event) {
         let bottomEdge = faderPath.offsetHeight - fader.offsetHeight;
-        let newTop = clientY - fader.offsetHeight/.55;        
+        let dragDist = event.clientY - startPos;
+        let newTop = faderStart + dragDist;        
         //restrains fader in track
         if(newTop<0){
             newTop=0;
-        }
-        if(newTop>bottomEdge){
+        } else if(newTop>bottomEdge){
             newTop = bottomEdge;
         }
 
@@ -48,16 +48,11 @@ function pickup(event) {
         var scrollPos = newTopPer*height;
         document.documentElement.scrollTop = scrollPos;
     }
-    moveAt(event.clientY);
-
-    function onMouseMove(event) {
-        moveAt(event.clientY);
-    }
-    document.addEventListener('mousemove', onMouseMove, false);
+    document.addEventListener('mousemove', moveAt, false);
     document.addEventListener('mouseup', dropIt, false);
 
     function dropIt() {
-        document.removeEventListener('mousemove', onMouseMove, false);
+        document.removeEventListener('mousemove', moveAt, false);
         fader.onmouseup = null;
         enabled = 'yes';
     }
@@ -66,23 +61,21 @@ function pickup(event) {
 fader.addEventListener('touchstart', touchPickup, false);
 function touchPickup(event) {
     enabled = 'no';
-    // document.body.append(fader);
-    function moveAt(clientY) {
-        // fader.style.left = pageX - fader.offsetWidth / 2 + 'px';
+    let startPos = event.clientY;
+    let faderStart = fader.offsetTop;
+   
+    function moveAt(event) {
         let bottomEdge = faderPath.offsetHeight - fader.offsetHeight;
-        let delta = clientY - fader.offsetHeight/.8; 
-        let newTop;
+        let dragDist = event.clientY - startPos; 
+        let newTop = faderStart + dragDist;
               
         //restrains fader in track
-        if(delta<0){
+        if(newTop<0){
             newTop=0;
-        } else if(delta>bottomEdge){
+        } else if(newTop>bottomEdge){
             newTop = bottomEdge;
-        } else {
-            newTop = delta;
         }
-        console.log(newTop); 
-
+    
         //sets new position
         fader.style.top = `${newTop}px`;
         //convert position to percentage
@@ -92,16 +85,11 @@ function touchPickup(event) {
         var scrollPos = newTopPer*height;
         document.documentElement.scrollTop = scrollPos;
     }
-    moveAt(event.targetTouches[0].clientY);
-
-    function onMouseMove(event) {
-        moveAt(event.targetTouches[0].clientY);
-    }
-    document.addEventListener('touchmove', onMouseMove, false);
+    document.addEventListener('touchmove', moveAt, false);
     document.addEventListener('touchend', dropIt, false);
 
     function dropIt() {
-        document.removeEventListener('touchmove', onMouseMove, false);
+        document.removeEventListener('touchmove', moveAt, false);
         fader.ontouchend = null;
         enabled = 'yes';
     }
