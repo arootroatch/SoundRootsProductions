@@ -290,6 +290,7 @@ nav ul li:hover {
     overflow: visible;
     z-index: 1000;
     opacity: .8;
+    touch-action: none;
 
 }
 
