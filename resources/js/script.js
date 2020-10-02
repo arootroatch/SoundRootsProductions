@@ -23,8 +23,7 @@ var fader = document.getElementById('scrollthumb');
 
 
 //click and drag
-fader.onmousedown = pickup;
-fader.ontouchstart = pickup;
+fader.addEventListener('mousedown', pickup, false);
 function pickup(event) {
     enabled = 'no';
     // document.body.append(fader);
@@ -54,18 +53,56 @@ function pickup(event) {
     function onMouseMove(event) {
         moveAt(event.clientY);
     }
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('touchmove', onMouseMove);
-    document.onmouseup = dropIt;
-    document.ontouchend = dropIt;
+    document.addEventListener('mousemove', onMouseMove, false);
+    document.addEventListener('mouseup', dropIt, false);
+
     function dropIt() {
-        document.removeEventListener('mousemove', onMouseMove);
-        document.removeEventListener('touchmove', onMouseMove);
-        fader.ontouchend = null;
+        document.removeEventListener('mousemove', onMouseMove, false);
         fader.onmouseup = null;
         enabled = 'yes';
     }
 }
+
+fader.addEventListener('touchstart', touchPickup, false);
+function touchPickup(event) {
+    enabled = 'no';
+    // document.body.append(fader);
+    function moveAt(clientY) {
+        // fader.style.left = pageX - fader.offsetWidth / 2 + 'px';
+        let bottomEdge = faderPath.offsetHeight - fader.offsetHeight;
+        let newTop = clientY - fader.offsetHeight/.8;        
+        //restrains fader in track
+        if(newTop<0){
+            newTop=0;
+        }
+        if(newTop>bottomEdge){
+            newTop = bottomEdge;
+        }
+
+        //sets new position
+        fader.style.top = `${newTop}px`;
+        //convert position to percentage
+        var newTopPer = (newTop / bottomEdge);
+        //make page scroll with fader position
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrollPos = newTopPer*height;
+        document.documentElement.scrollTop = scrollPos;
+    }
+    moveAt(event.touches[0].clientY);
+
+    function onMouseMove(event) {
+        moveAt(event.touches[0].clientY);
+    }
+    document.addEventListener('touchmove', onMouseMove, false);
+    document.addEventListener('touchend', dropIt, false);
+
+    function dropIt() {
+        document.removeEventListener('touchmove', onMouseMove, false);
+        fader.ontouchend = null;
+        enabled = 'yes';
+    }
+}
+
 fader.ondragstart = function() {
     return false;
 }
@@ -119,6 +156,9 @@ function closeNav() {
     document.getElementById("sideNav").style.width = "0px";
     document.getElementById("main").style.opacity = "1";
 }
+//close Nav when clicking outisde of it
+document.getElementById('main').addEventListener('touchstart', closeNav);
+document.getElementById('main').addEventListener('mousedown', closeNav);
 
 let closed = true;
 
