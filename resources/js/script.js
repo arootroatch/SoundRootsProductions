@@ -60,6 +60,8 @@ function pickup(event) {
 
 fader.addEventListener('touchstart', touchPickup, false);
 function touchPickup(event) {
+    window.removeEventListener('scroll', scrollLink, false);
+
     enabled = 'no';
     let startPos = event.targetTouches[0].clientY;
     let faderStart = fader.offsetTop;
