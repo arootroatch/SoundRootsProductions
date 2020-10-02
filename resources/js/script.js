@@ -92,10 +92,10 @@ function touchPickup(event) {
         var scrollPos = newTopPer*height;
         document.documentElement.scrollTop = scrollPos;
     }
-    moveAt(event.touches[0].clientY);
+    moveAt(event.targetTouches[0].clientY);
 
     function onMouseMove(event) {
-        moveAt(event.touches[0].clientY);
+        moveAt(event.targetTouches[0].clientY);
     }
     document.addEventListener('touchmove', onMouseMove, false);
     document.addEventListener('touchend', dropIt, false);
