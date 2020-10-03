@@ -69,6 +69,7 @@ function touchPickup(event) {
     let faderStart = fader.offsetTop;
    
     function moveAt(touchEvent) {
+        touchEvent.preventDefault();
         let bottomEdge = faderPath.offsetHeight - fader.offsetHeight;
         let dragDist = touchEvent.targetTouches[0].clientY - startPos; 
         let newTop = faderStart + dragDist;
