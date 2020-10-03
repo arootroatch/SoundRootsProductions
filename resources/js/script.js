@@ -93,6 +93,7 @@ function touchPickup(event) {
     }
     document.addEventListener('touchmove', moveAt, false);
     document.addEventListener('touchend', dropIt, false);
+    document.addEventListener('touchcancel', function(e){e.preventDefault()}, false);
 
     function dropIt() {
         document.removeEventListener('touchmove', moveAt, false);
