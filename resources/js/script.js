@@ -20,49 +20,51 @@ window.addEventListener("resize", function() {
 var enabled = 'yes';
 var faderPath = document.getElementById('scrolltrack');
 var fader = document.getElementById('scrollthumb');
+let touch = false;
 
 //click and drag
 fader.addEventListener('mousedown', pickup, false);
 function pickup(event) {
-    enabled = 'no';
-    let startPos = event.clientY;
-    let faderStart = fader.offsetTop;
-    
-    function moveAt(event) {
-        let bottomEdge = faderPath.offsetHeight - fader.offsetHeight;
-        let dragDist = event.clientY - startPos;
-        let newTop = faderStart + dragDist;        
-        //restrains fader in track
-        if(newTop<0){
-            newTop=0;
-        } else if(newTop>bottomEdge){
-            newTop = bottomEdge;
+    if (touch == false){
+        enabled = 'no';
+        let startPos = event.clientY;
+        let faderStart = fader.offsetTop;
+        
+        function moveAt(event) {
+            let bottomEdge = faderPath.offsetHeight - fader.offsetHeight;
+            let dragDist = event.clientY - startPos;
+            let newTop = faderStart + dragDist;        
+            //restrains fader in track
+            if(newTop<0){
+                newTop=0;
+            } else if(newTop>bottomEdge){
+                newTop = bottomEdge;
+            }
+
+            //sets new position
+            fader.style.top = `${newTop}px`;
+            //convert position to percentage
+            var newTopPer = (newTop / bottomEdge);
+            //make page scroll with fader position
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrollPos = newTopPer*height;
+            document.documentElement.scrollTop = scrollPos;
         }
+        document.addEventListener('mousemove', moveAt, false);
+        document.addEventListener('mouseup', dropIt, false);
 
-        //sets new position
-        fader.style.top = `${newTop}px`;
-        //convert position to percentage
-        var newTopPer = (newTop / bottomEdge);
-        //make page scroll with fader position
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrollPos = newTopPer*height;
-        document.documentElement.scrollTop = scrollPos;
-    }
-    document.addEventListener('mousemove', moveAt, false);
-    document.addEventListener('mouseup', dropIt, false);
-
-    function dropIt() {
-        document.removeEventListener('mousemove', moveAt, false);
-        fader.onmouseup = null;
-        enabled = 'yes';
+        function dropIt() {
+            document.removeEventListener('mousemove', moveAt, false);
+            fader.onmouseup = null;
+            enabled = 'yes';
+        }
     }
 }
 
 fader.addEventListener('touchstart', touchPickup, false);
 function touchPickup(event) {
-    window.removeEventListener('scroll', scrollLink, false);
-
     enabled = 'no';
+    touch = true;
     let startPos = event.targetTouches[0].clientY;
     let faderStart = fader.offsetTop;
    
@@ -94,6 +96,7 @@ function touchPickup(event) {
         document.removeEventListener('touchmove', moveAt, false);
         fader.ontouchend = null;
         enabled = 'yes';
+        touch = false;
     }
 }
 
