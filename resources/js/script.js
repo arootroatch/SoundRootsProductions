@@ -63,6 +63,7 @@ function pickup(event) {
 
 fader.addEventListener('touchstart', touchPickup, false);
 function touchPickup(event) {
+    event.preventDefault();
     enabled = 'no';
     touch = true;
     let startPos = event.targetTouches[0].clientY;
