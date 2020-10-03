@@ -23,7 +23,7 @@ var fader = document.getElementById('scrollthumb');
 let touch = false;
 
 //click and drag
-fader.addEventListener('mousedown', pickup, false);
+// fader.addEventListener('mousedown', pickup, false);
 function pickup(event) {
     if (touch == false){
         enabled = 'no';
