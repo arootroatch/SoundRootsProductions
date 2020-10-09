@@ -23,32 +23,40 @@ var fader = document.getElementById('scrollthumb');
 let touch = false;
 
 //click and drag
-// fader.addEventListener('mousedown', pickup, false);
+fader.addEventListener('mousedown', pickup, false);
 function pickup(event) {
     if (touch == false){
         enabled = 'no';
         let startPos = event.clientY;
         let faderStart = fader.offsetTop;
-        
-        function moveAt(event) {
-            let bottomEdge = faderPath.offsetHeight - fader.offsetHeight;
-            let dragDist = event.clientY - startPos;
-            let newTop = faderStart + dragDist;        
-            //restrains fader in track
-            if(newTop<0){
-                newTop=0;
-            } else if(newTop>bottomEdge){
-                newTop = bottomEdge;
-            }
+        let bottomEdge = faderPath.offsetHeight - fader.offsetHeight;
 
-            //sets new position
-            fader.style.top = `${newTop}px`;
-            //convert position to percentage
-            var newTopPer = (newTop / bottomEdge);
-            //make page scroll with fader position
-            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            var scrollPos = newTopPer*height;
-            document.documentElement.scrollTop = scrollPos;
+        let needRAF = null;
+        function moveAt(event) {
+            if (needRAF){
+                needRAF = null;
+                cancelAnimationFrame(setNew);
+            }
+            needRAF = requestAnimationFrame(setNew);
+            function setNew(){
+                let dragDist = event.clientY - startPos;
+                let newTop = faderStart + dragDist;        
+                //restrains fader in track
+                if(newTop<0){
+                    newTop=0;
+                } else if(newTop>bottomEdge){
+                    newTop = bottomEdge;
+                }
+
+                //sets new position
+                fader.style.top = `${newTop}px`;
+                //convert position to percentage
+                var newTopPer = (newTop / bottomEdge);
+                //make page scroll with fader position
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrollPos = newTopPer*height;
+                document.documentElement.scrollTop = scrollPos;
+            }
         }
         document.addEventListener('mousemove', moveAt, false);
         document.addEventListener('mouseup', dropIt, false);
@@ -68,28 +76,38 @@ function touchPickup(event) {
     touch = true;
     let startPos = event.targetTouches[0].clientY;
     let faderStart = fader.offsetTop;
-   
+    //declare bottomEdge here to prevent recalculating with each drag move
+    let bottomEdge = faderPath.offsetHeight - fader.offsetHeight;
+
+    let needRAF = null;
     function moveAt(touchEvent) {
         touchEvent.preventDefault();
-        let bottomEdge = faderPath.offsetHeight - fader.offsetHeight;
-        let dragDist = touchEvent.targetTouches[0].clientY - startPos; 
-        let newTop = faderStart + dragDist;
-              
-        //restrains fader in track
-        if(newTop<0){
-            newTop=0;
-        } else if(newTop>bottomEdge){
-            newTop = bottomEdge;
+        if (needRAF) {
+            needRAF = null;
+            cancelAnimationFrame(setNew);
         }
-    
-        //sets new position
-        fader.style.top = `${newTop}px`;
-        //convert position to percentage
-        var newTopPer = (newTop / bottomEdge);
-        //make page scroll with fader position
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrollPos = newTopPer*height;
-        document.documentElement.scrollTop = scrollPos;
+        needRAF = requestAnimationFrame(setNew);
+        function setNew() {
+            let dragDist = touchEvent.targetTouches[0].clientY - startPos; 
+            let newTop = faderStart + dragDist;
+                
+            //restrains fader in track
+            if(newTop<0){
+                newTop=0;
+            } else if(newTop>bottomEdge){
+                newTop = bottomEdge;
+            }
+            fader.style.top = `${newTop}px`;
+            //convert position to percentage
+            var newTopPer = (newTop / bottomEdge);
+            //make page scroll with fader position
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrollPos = newTopPer*height;
+            document.documentElement.scrollTop = scrollPos;
+        }
+        
+        
+        
     }
     document.addEventListener('touchmove', moveAt, false);
     document.addEventListener('touchend', dropIt, false);
