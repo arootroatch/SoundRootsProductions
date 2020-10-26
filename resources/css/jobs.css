@@ -1,0 +1,55 @@
+html, body {
+    box-sizing: border-box;
+}
+h1 {
+    font-family: 'OPTIAgency-Gothic';
+    text-align: center;
+    letter-spacing: .5em;
+    padding-top: 50px;
+    text-shadow: 3px 5px 5px rgb(0, 68, 255);
+
+}
+
+section {
+    padding: 50px;
+    width: auto;
+}
+
+section:first-of-type{
+    padding-top: 0;
+}
+
+main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0,0,0,0.8)), url(img/SoundRoots_WhiteLogoTransparent.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+p{
+    max-width: 800px;
+    background-color: rgba(0,0,0,0.5);
+    margin: 0 auto;
+}
+
+
+
+#btnContainer {
+    margin: 50px auto;
+    text-align: center;
+    font-family: 'OPTIAgency-Gothic';
+    font-size: 150%;
+    letter-spacing: 5px;
+}
+
+#or {
+    font-size: 150%;
+    position: relative;
+    top: 20px;
+}
+
+.jobsButton {
+    height: 200px;
+    width: 250px;
+    margin: 0 20px;
+}

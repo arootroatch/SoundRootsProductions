@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- FAVICONS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">  
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="resources/css/style.css" type="text/css">
+    <link rel="stylesheet" href="resources/css/jobs.css" type="text/css">
+    <noscript><link rel="stylesheet" href="resources/css/no-js.css" type="text/css"></noscript>
+    <title>Jobs - Sound Roots Productions</title>
+    <meta name="description" content="Apply for Audio Engineering jobs in Nashville at Sound Roots Productions.">
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    
+</head>
+<body>
+    <nav id="sideNav">
+        <button onclick="closeNav()"><ion-icon name="close-outline"></ion-icon></button>
+        <ul>
+            <li><a href="index.html#aboutAnchor" class="navLink" onclick="closeNav()">About</a></li>
+            <li><a href="index.html#philosophyAnchor" class="navLink" onclick="closeNav()">Our Philosophy</a></li>
+            <li onclick="toggleNestedNav()" class="navLink">Our Services</li>
+            <div id="nestedNav">
+                <ul>
+                    <li><a href="index.html#audioAnchor" class="navLinkInt" onclick="closeNav()">Audio Engineering</a></li>
+                    <li><a href="index.html#lightingAnchor" class="navLinkInt" onclick="closeNav()">DMX Lighting</a></li>
+                    <li><a href="index.html#repairAnchor" class="navLinkInt" onclick="closeNav()">Maintenance &amp; <br>Repair</a></li>
+                    <li><a href="index.html#programmingAnchor" class="navLinkInt" onclick="closeNav()">Programming</a></li>
+                </ul>
+            </div>
+            <li><a href="index.html#testimonials" class="navLink" onclick="closeNav()">Why Sound<br>Roots?</a></li>
+            <li><a href="index.html#contact" class="navLink" onclick="closeNav()">Contact Us</a></li>
+        </ul>
+        <div id="bottomDiv">
+            <p style="margin-bottom: 10px; font-size: 90%;"><a class="navLink" href="index.html#top" onclick="closeNav()">Back to Home</a></p>
+            <p>
+                <a href="https://www.facebook.com/soundrootsproductions/" target="_blank" rel="noopener noreferrer" class="logoLink"><ion-icon id="logo-facebook" name="logo-facebook"></ion-icon></a>
+                <a href="https://www.instagram.com/soundrootsproductions/" target="_blank" rel="noopener noreferrer" class="logoLink"><ion-icon id="logo-instagram" name="logo-instagram"></ion-icon></a>
+            </p>
+        </div>
+    </nav>
+    <main id="main">
+        <button id="menuBtn" class="btn" onclick="openNav()">Menu</button>
+        <h1 id="jobsHeading">Join the Sound Roots <br> Productions team</h1>
+        <section>
+            <div class="row">
+                <p>Sound Roots Productions provides the audio engineering and lighting services for the Nashville venues Tin Roof Broadway, Tin Roof Demonbreun, and the Sutler year-round, as well as various other gig opportunities throughout the year. Wanna join the team? </p>
+                <div id="btnContainer">
+                    <button class="jobsButton btn">
+                        Upload your resume
+                    </button>
+                    <span id="or">OR</span>
+                    <button class="jobsButton btn">
+                        Fill out our application
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type="text/javascript" src="resources/js/jobs.js"></script>
+</body>
+</html>

@@ -147,7 +147,7 @@ noscript div p {
 
 /* headings */
 
-h2 {
+h2, #jobsHeading {
     font-family: 'OPTIAgency-Gothic';
     letter-spacing: 10px;
     text-shadow: 3px 5px 5px rgb(0, 68, 255);
@@ -157,7 +157,7 @@ h2 {
     text-align: center;
 }
 
-h2::after{
+h2::after, #jobsHeading::after{
     display: block;
     height: 2px;
     background-color: rgb(199,199,199);
@@ -185,7 +185,7 @@ h2::after{
     overflow-x: hidden;
     overflow-y: scroll;
     transition: .2s;
-    z-index: 2;
+    z-index: 1002;
 }
 
 nav button {
