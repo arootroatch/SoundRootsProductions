@@ -917,12 +917,12 @@ blockquote {
     color: rgb(214, 214, 214);
 }
 
-#contactForm {
+form {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
     font-family: 'OPTIAgency-Gothic';
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     color: rgb(224, 224, 224);
     font-size: 140%;
     line-height: 150%;

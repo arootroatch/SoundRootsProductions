@@ -97,15 +97,19 @@ form {
     width: 100%;
     line-height: 200%;
     color: black;
-    font-size: 90%;
+    /* font-size: 90%; */
 }
 
 button {
     color: black;
 }
 
-.radio label {
+.radio label,
+.checkbox label {
     line-height: 150%;
+    font-family: 'Titillium';
+    font-size: 80%;
+    letter-spacing: initial;
 }
 
 .radio, 
@@ -130,7 +134,7 @@ textarea {
     width: 100%;
     height: 100px;
     color: black;
-    font-size: 90%;
+    /* font-size: 90%; */
 }
 
 #resumeForm, #applicationSection {
