@@ -85,6 +85,9 @@ form {
     border-radius: 5%;
 }
 
+.smallCaps {
+    font-size: 80%;
+}
 
 .form-group {
     width: 80%;
