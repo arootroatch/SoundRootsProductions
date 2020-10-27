@@ -151,3 +151,10 @@ textarea {
         padding: 10px;
     }
 }
+
+@media only screen and (max-width: 300px){
+    .jobsButton {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
