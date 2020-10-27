@@ -963,6 +963,16 @@ textarea {
 
 }
 
+#jobsLink{
+    font-size: 60%;
+    font-family: 'Titillium';
+    letter-spacing: initial;
+}
+.form-group:last-of-type{
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /* footer  */
 
