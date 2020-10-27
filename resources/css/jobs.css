@@ -2,6 +2,7 @@ html, body {
     box-sizing: border-box;
     scrollbar-width: auto; /*Firefox*/
     -ms-overflow-style: auto;  /*Internet Explorer 10+*/
+    /* overflow-x: hidden; */
 }
 html::-webkit-scrollbar { /*WebKit */
     width: auto;
@@ -40,6 +41,7 @@ main {
     max-width: 800px;
     background-color: rgba(0,0,0,0.5);
     margin: 0 auto;
+    text-align: justify;
 }
 
 
@@ -133,4 +135,19 @@ textarea {
 
 #resumeForm, #applicationSection {
     display: none;
+}
+
+@media only screen and (max-width: 750px){
+    #or{
+        display: block;
+    }
+
+    #appButton {
+        margin-top: 34px;
+    }
+}
+@media only screen and (max-width: 585px){
+    section{
+        padding: 10px;
+    }
 }
