@@ -38,6 +38,7 @@
             </div>
             <li><a href="index.html#testimonials" class="navLink" onclick="closeNav()">Why Sound<br>Roots?</a></li>
             <li><a href="index.html#contact" class="navLink" onclick="closeNav()">Contact Us</a></li>
+            <li><a href="jobs.html" class="navLink" onclick="closeNav()">Jobs</a></li>
         </ul>
         <div id="bottomDiv">
             <p style="margin-bottom: 10px; font-size: 90%;"><a class="navLink" href="index.html#top" onclick="closeNav()">Back to Home</a></p>
@@ -50,19 +51,121 @@
     <main id="main">
         <button id="menuBtn" class="btn" onclick="openNav()">Menu</button>
         <h1 id="jobsHeading">Join the Sound Roots <br> Productions team</h1>
-        <section>
+        <div class="row" id="buttonRow">
+            <button class="btn" id="back" onclick="backButton()">&#8592;Back </button>
+        </div>
+        <section id="buttonSection">
             <div class="row">
-                <p>Sound Roots Productions provides the audio engineering and lighting services for the Nashville venues Tin Roof Broadway, Tin Roof Demonbreun, and the Sutler year-round, as well as various other gig opportunities throughout the year. Wanna join the team? </p>
+                <p>Sound Roots Productions provides the audio engineering and lighting services for the Nashville venues Tin Roof Broadway, Tin Roof Demonbreun, and the Sutler year-round, as well as various other gig opportunities throughout the year. Are you ready to join the team? </p>
                 <div id="btnContainer">
-                    <button class="jobsButton btn">
+                    <button class="jobsButton btn" onclick="showResume()">
                         Upload your resume
                     </button>
                     <span id="or">OR</span>
-                    <button class="jobsButton btn">
+                    <button class="jobsButton btn" onclick="showApplication()">
                         Fill out our application
                     </button>
                 </div>
             </div>
+        </section>
+        <section id="resumeForm">
+            <form name="resume" data-netlify="true" netlify-honeypot="bot-field" id="resume" method="post">
+                <div class="form-group">
+                    <label id="name-label" for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Please enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label id="email-label" for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Please enter your email address" required>
+                </div>
+                <br>
+                <div class="hidden">
+                    <label for="bot-field">I'm a robot: <input name="bot-field"></label>
+                </div>
+                <div class="form-group radio">
+                    <p>Do you live in the Nashville, TN area?</p>
+                    <label><input type="radio" name="residence" value="yes" class="input-radio" checked required>Yes</label><br>
+                    <label><input type="radio" name="residence" value="no" class="input-radio">No</label><br>
+                </div>
+                <div class="form-group checkbox">
+                    <p>Which locations(s) are you intersted in working at? <span>(Select all that apply)</span></p>
+                    <label><input name="location" value="TRBroadway" type="checkbox" class="input-checkbox"/>Tin Roof Broadway</label>
+                    <label><input name="location" value="TRDemonbreun" type="checkbox" class="input-checkbox"/>Tin Roof Demonbreun</label>
+                    <label><input name="location" value="Sutler" type="checkbox" class="input-checkbox"/>The Sutler</label>
+                    <label><input name="location" value="Other" type="checkbox" class="input-checkbox"/>Other gig/travel opportunities</label>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="resume">Please upload your resume: </label><br>
+                    <input type="file" name="resume" id="resume" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <p>What is your availability?</p>
+                    <textarea name="availability" placeholder="e.g. Friday and Saturday nights. No Sundays."></textarea>
+                </div>
+                <div class="form-group">
+                    <p>Any additional comments?</p>
+                    <textarea name="comments" placeholder="Enter your comments here"></textarea>
+                </div>
+                <div class="form-group">
+                    <button id="submit" type="submit" class="btn">
+                        Submit
+                    </button> 
+                </div>
+            </form>
+        </section>
+        <section id="applicationSection">
+            <form name="application" data-netlify="true" netlify-honeypot="bot-field" id="application" method="post">
+                <div class="form-group">
+                    <label id="name-label" for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Please enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label id="email-label" for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Please enter your email address" required>
+                </div>
+                <div class="form-group">
+                    <label id="number-label" for="date">Date of Birth</label>
+                    <input type="date" id="date" name="date" class="form-control" placeholder="Please enter your age"> 
+                </div>
+                <div class="form-group radio">
+                    <p>Do you live in the Nashville, TN area?</p>
+                    <label><input type="radio" name="residence" value="yes" class="input-radio" checked required>Yes</label><br>
+                    <label><input type="radio" name="residence" value="no" class="input-radio">No</label><br>
+                </div>
+                <div class="form-group checkbox">
+                    <p>Which locations(s) are you intersted in working at? <span>(Select all that apply)</span></p>
+                    <label><input name="location" value="TRBroadway" type="checkbox" class="input-checkbox"/>Tin Roof Broadway</label>
+                    <label><input name="location" value="TRDemonbreun" type="checkbox" class="input-checkbox"/>Tin Roof Demonbreun</label>
+                    <label><input name="location" value="Sutler" type="checkbox" class="input-checkbox"/>The Sutler</label>
+                    <label><input name="location" value="Other" type="checkbox" class="input-checkbox"/>Other gig/travel opportunities</label>
+                </div>
+                <div class="hidden">
+                    <label for="bot-field">I'm a robot: <input name="bot-field"></label>
+                </div>
+                <div class="form-group">
+                    <p>Please speak briefly about your relevant educational background:</p>
+                    <textarea name="education" placeholder="e.g. Bachelor of Science in Audio Technology from MTSU, graduated Spring 2016"></textarea>
+                </div>
+                <div class="form-group">
+                    <p>What relevant work experience do you have?</p>
+                    <textarea name="work" placeholder="FOH for Your Favorite Band, 2020 World Tour; &#10QC Technician at VER, November 2017-June 2019; etc."></textarea>
+                </div>
+                <div class="form-group">
+                    <p>What is your availability?</p>
+                    <textarea name="availability" placeholder="e.g. Friday and Saturday nights. No Sundays."></textarea>
+                </div>
+                <div class="form-group">
+                    <p>Any additional comments?</p>
+                    <textarea name="comments" placeholder="Enter your comments here"></textarea>
+                </div>
+                <div class="form-group">
+                    <button id="submit" type="submit" class="btn">
+                        Submit
+                    </button> 
+                </div>
+            </form>
         </section>
     </main>
     <script type="text/javascript" src="resources/js/jobs.js"></script>

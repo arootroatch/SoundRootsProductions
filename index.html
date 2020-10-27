@@ -46,6 +46,7 @@
             </div>
             <li><a href="#testimonials" class="navLink" onclick="closeNav()">Why Sound<br>Roots?</a></li>
             <li><a href="#contact" class="navLink" onclick="closeNav()">Contact Us</a></li>
+            <li><a href="jobs.html" class="navLink" onclick="closeNav()">Jobs</a></li>
         </ul>
         <div id="bottomDiv">
             <p style="margin-bottom: 10px; font-size: 90%;"><a class="navLink" href="#top" onclick="closeNav()">Back to top</a></p>
@@ -873,7 +874,7 @@
         </section>
         <section id="contact">
             <h2>Contact Us</h2>
-            <form name="survey-form" data-netlify="true" id="contactForm" method="post">
+            <form name="contact-form" data-netlify="true" netlify-honeypot="bot-field" id="contactForm" method="post">
                 <div class="form-group">
                     <label id="name-label" for="name">Name</label>
                     <input type="text" id="name" name="name" class="form-control" placeholder="Please enter your name" required>
@@ -881,6 +882,9 @@
                 <div class="form-group">
                     <label id="email-label" for="email">Email</label>
                     <input type="email" id="email" name="email" class="form-control" placeholder="Please enter your email address" required>
+                </div>
+                <div class="hidden">
+                    <label for="bot-field">I'm a robot: <input name="bot-field"></label>
                 </div>
                 <div class="form-group">
                     <p>How can we help?</p>

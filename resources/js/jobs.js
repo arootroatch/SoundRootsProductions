@@ -19,3 +19,33 @@ function toggleNestedNav(){
         closed = true;
     }
 }
+
+// Show and hide sections 
+
+let buttonSection = document.getElementById('buttonSection');
+let application = document.getElementById('applicationSection');
+let resumeForm = document.getElementById('resumeForm');
+let buttonRow = document.getElementById('buttonRow');
+
+function showResume() {
+    buttonSection.style.display = 'none';
+    resumeForm.style.display = 'block';
+    buttonRow.style.display = 'block';
+}
+
+function showApplication(){
+    buttonSection.style.display = 'none';
+    application.style.display = 'block';
+    buttonRow.style.display = 'block';
+}
+
+function backButton(){
+    buttonRow.style.display = 'none';
+    if (application.style.display == 'block') {
+        application.style.display = 'none';
+    }
+    if (resumeForm.style.display == 'block'){
+        resumeForm.style.display = 'none';
+    }
+    buttonSection.style.display = 'block';
+}
