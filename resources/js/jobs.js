@@ -65,6 +65,7 @@ function revealOptions(){
             }
             if (explain.style.display == 'block'){
                 explain.style.display = 'none';
+                document.getElementById('other').required = false;
             }
             broadwayRadio.style.display = 'block'
             break;
@@ -74,6 +75,7 @@ function revealOptions(){
             }
             if (explain.style.display == 'block'){
                 explain.style.display = 'none';
+                document.getElementById('other').required = false;
             }
             demonbreunRadio.style.display = 'block'
             break;
@@ -83,6 +85,7 @@ function revealOptions(){
             }
             if (explain.style.display == 'block'){
                 explain.style.display = 'none';
+                document.getElementById('other').required = false;
             }
             if (demonbreunRadio.style.display == 'block'){
                 demonbreunRadio.style.display = 'none';
@@ -96,6 +99,7 @@ function revealOptions(){
                 demonbreunRadio.style.display = 'none';
             }
             explain.style.display = 'block'
+            document.getElementById('other').required = true;
             break;
         case '':
             if (broadwayRadio.style.display == 'block'){
@@ -103,6 +107,7 @@ function revealOptions(){
             }
             if (explain.style.display == 'block'){
                 explain.style.display = 'none';
+                document.getElementById('other').required = false;
             }
             if (demonbreunRadio.style.display == 'block'){
                 demonbreunRadio.style.display = 'none';
