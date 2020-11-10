@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="resources/css/style.css" type="text/css">
     <link rel="stylesheet" href="resources/css/jobs.css" type="text/css">
     <noscript><link rel="stylesheet" href="resources/css/no-js.css" type="text/css"></noscript>
-    <title>Jobs - Sound Roots Productions</title>
-    <meta name="description" content="Apply for Audio Engineering jobs in Nashville at Sound Roots Productions.">
+    <title>Feedback - Sound Roots Productions</title>
+    <meta name="description" content="Review your audio engineer at Sound Roots Productions">
     <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
     
@@ -50,90 +50,53 @@
     </nav>
     <main id="main">
         <button id="menuBtn" class="btn" onclick="openNav()">Menu</button>
-        <h1 id="jobsHeading">Join the Sound Roots <br> Productions team</h1>
+        <h1 id="jobsHeading">We want to hear<br>from you!</h1>
         <div class="row" id="buttonRow">
             <button class="btn" id="back" onclick="backButton()">&#8592;Back </button>
         </div>
         <section id="buttonSection">
             <div class="row">
-                <p>Sound Roots Productions provides the audio engineering and lighting services for the Nashville venues Tin Roof Broadway, Tin Roof Demonbreun, and the Sutler year-round, as well as various other gig opportunities throughout the year. Are you ready to join the team? </p>
-                <div id="btnContainer">
-                    <button class="jobsButton btn" onclick="showResume()">
-                        Upload your resume
-                    </button>
-                    <span id="or">OR</span>
-                    <button class="jobsButton btn" id="appButton" onclick="showApplication()">
-                        Fill out our application
-                    </button>
-                </div>
+                <p>During the show, we strive to make sure there's no nasty feedback squealing through the speakers. After the show, we rely on your feedback to ensure we're the best we can be. We want to do everything we can to provide the best experience possible, and your input keeps our quality high. Please tell us about your experience below. All fields are required.</p>
             </div>
         </section>
-        <section id="resumeForm" class="hidden">
-            <form name="resume" data-netlify="true" netlify-honeypot="bot-field" id="resume" method="post">
+        <section>
+            <form name="feedback" data-netlify="true" netlify-honeypot="bot-field" id="feedback" method="post">
                 <div class="form-group">
-                    <label id="name-label" for="name">N<span class="smallCaps">ame</span></label>
-                    <input type="text" id="name" name="name" class="form-control" placeholder="Please enter your name" required>
+                    <label id="name-label" for="band-name">N<span class="smallCaps">ame</span></label>
+                    <input type="text" id="band-name" name="band-name" class="form-control" placeholder="Chris Young" required>
                 </div>
-                <div class="form-group">
-                    <label id="email-label" for="email">E<span class="smallCaps">mail</span></label>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Please enter your email address" required>
-                </div>
-                <br>
-                <div class="hidden">
-                    <label for="bot-field">I'm a robot: <input name="bot-field"></label>
-                </div>
-                <div class="form-group radio">
-                    <p>D<span class="smallCaps">o you live in the </span>N<span class="smallCaps">ashville, </span>TN <span class="smallCaps">area?</span></p>
-                    <label><input type="radio" name="residence" value="yes" class="input-radio" checked required>Yes</label><br>
-                    <label><input type="radio" name="residence" value="no" class="input-radio">No</label><br>
-                </div>
-                <div class="form-group checkbox">
-                    <p>W<span class="smallCaps">hich location(s) are you interested in working at?</span> <span class="smallCaps">(Select all that apply)</span></p>
-                    <label><input name="location[]" value="TRBroadway" type="checkbox" class="input-checkbox"/>Tin Roof Broadway</label>
-                    <label><input name="location[]" value="TRDemonbreun" type="checkbox" class="input-checkbox"/>Tin Roof Demonbreun</label>
-                    <label><input name="location[]" value="Sutler" type="checkbox" class="input-checkbox"/>The Sutler</label>
-                    <label><input name="location[]" value="Other" type="checkbox" class="input-checkbox"/>Other gig/travel opportunities</label>
-                </div>
-                <br>
-                <div class="form-group">
-                    <label for="resume">P<span class="smallCaps">lease upload your resume in </span>PDF: </label><br>
-                    <input type="file" name="resume" id="resume" accept=".pdf" required>
-                </div>
-                <br>
-                <div class="form-group">
-                    <p>W<span class="smallCaps">hat is your availability?</span></p>
-                    <textarea name="availability" placeholder="e.g. Friday and Saturday nights. No Sundays."></textarea>
+                <div class="form-group flex">
+                    <div id="dateDiv">
+                        <label id="set-date-label" for="set-date">D<span class="smallCaps">ate of set</span></label>
+                        <input type="date" id="set-date" name="set-date" class="form-control" placeholder="Please enter your email address" required>
+                    </div>
+                    <div>
+                        <label for="time" id="time-label">T<span class="smallCaps">ime of set</span></label>
+                        <input type="time" name="time" id="time" class="form-control" required> 
+                    </div>
                 </div>
                 <div class="form-group">
-                    <p>A<span class="smallCaps">ny additional comments?</span></p>
-                    <textarea name="comments" placeholder="Enter your comments here"></textarea>
+                    <label id="venue-label" for="venue">V<span class="smallCaps">enue </span></label>
+                    <select id="venue" name="venue" class="form-control">
+                        <option value="TR-Broadway">Tin Roof Broadway</option>
+                        <option value="TR-Demonbreun">Tin Roof Demonbreun</option>
+                        <option value="Sutler">The Sutler</option>
+                        <option value="Other">Other</option>
+                    </select> 
                 </div>
-                <div class="form-group">
-                    <button id="submit" type="submit" class="btn">
-                        Submit
-                    </button> 
+                <div class="form-group radio hidden" id="broadwayRadio">
+                    <p>W<span class="smallCaps">hich stage?</span></p>
+                    <label><input type="radio" name="BroadwayStage" value="First floor" class="input-radio" checked required>First floor</label><br>
+                    <label><input type="radio" name="BroadwayStage" value="Second floor" class="input-radio">Second floor</label><br>
                 </div>
-            </form>
-        </section>
-        <section id="applicationSection" class="hidden">
-            <form name="application" data-netlify="true" netlify-honeypot="bot-field" id="application" method="post">
-                <div class="form-group">
-                    <label id="name-label" for="name">N<span class="smallCaps">ame</span></label>
-                    <input type="text" id="name" name="name" class="form-control" placeholder="Please enter your name" required>
+                <div class="form-group hidden" id="demonbreunRadio">
+                    <p>W<span class="smallCaps">hich stage?</span></p>
+                    <label><input type="radio" name="DemonbreunStage" value="Main stage" class="input-radio" checked required>Main Stage</label><br>
+                    <label><input type="radio" name="DemonbreunStage" value="Two Bits" class="input-radio">Two Bits</label><br>
                 </div>
-                <div class="form-group">
-                    <label id="email-label" for="email">E<span class="smallCaps">mail</span></label>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Please enter your email address" required>
-                </div>
-                <div class="form-group">
-                    <label id="number-label" for="date">D<span class="smallCaps">ate of </span>B<span class="smallCaps">irth</span></label>
-                    <input type="date" id="date" name="date" class="form-control" placeholder="Please enter your age"> 
-                </div>
-                <br>
-                <div class="form-group radio">
-                    <p>D<span class="smallCaps">o you live in the </span>N<span class="smallCaps">ashville, </span>TN <span class="smallCaps">area?</span></p>
-                    <label><input type="radio" name="residence" value="yes" class="input-radio" checked required>Yes</label><br>
-                    <label><input type="radio" name="residence" value="no" class="input-radio">No</label><br>
+                <div class="form-group hidden" id="explain">
+                    <label for="time" id="time-label">P<span class="smallCaps">lease explain:</span></label>
+                    <input class="form-control" type="text" name="other" id="other" placeholder="One-off in Birgminham, AL for Your Favorite Band"></textarea>
                 </div>
                 <div class="form-group checkbox">
                     <p>W<span class="smallCaps">hich location(s) are you interested in working at?</span> <span class="smallCaps">(Select all that apply)</span></p>

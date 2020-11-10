@@ -27,6 +27,8 @@ let application = document.getElementById('applicationSection');
 let resumeForm = document.getElementById('resumeForm');
 let buttonRow = document.getElementById('buttonRow');
 
+let 
+
 function showResume() {
     buttonSection.style.display = 'none';
     resumeForm.style.display = 'block';
@@ -49,3 +51,4 @@ function backButton(){
     }
     buttonSection.style.display = 'block';
 }
+

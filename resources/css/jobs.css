@@ -66,6 +66,15 @@ main {
     margin: 0 20px;
 }
 
+.jobsButton a {
+    text-decoration: none;
+    color:rgb(199,199,199);
+}
+
+.jobsButton a:hover{
+    color: white;
+}
+
 #buttonRow {
     text-align: center;
     display: none;
@@ -84,6 +93,7 @@ form {
     padding: 40px 0;
     border-radius: 5%;
 }
+
 
 .smallCaps {
     font-size: 80%;
@@ -140,9 +150,6 @@ textarea {
     /* font-size: 90%; */
 }
 
-#resumeForm, #applicationSection {
-    display: none;
-}
 
 @media only screen and (max-width: 750px){
     #or{
@@ -165,3 +172,24 @@ textarea {
         margin-right: 0;
     }
 }
+
+
+/* FOR SURVEY FEEDBACK PAGE */
+
+#feedback {
+    margin-top: 30px;
+}
+
+
+.flex {
+    display: flex;
+}
+
+#dateDiv{
+    margin-right: 50px;
+}
+
+.flex div {
+    width: 50%;
+}
+
