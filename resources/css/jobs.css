@@ -207,18 +207,21 @@ textarea {
 #rating input{
     display: none;
 }
-#rating label::before{
-    content: '\2606';
+
+#rating input:checked ~ label:before{
+    content: '\2605'; /* Solid Star */
 }
 
-#rating input:checked,
-#rating input:checked ~ label:before,
+#rating label::before{
+    content: '\2606'; /*hollow star*/
+}
+
+
 #rating label:hover::before, 
 #rating label:hover ~ label::before
 {
-    content: '\2605';
+    content: '\2605'; /*Solid Star*/
 }
-
 
 
 #rating {
