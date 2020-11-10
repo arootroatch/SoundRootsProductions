@@ -27,7 +27,6 @@ let application = document.getElementById('applicationSection');
 let resumeForm = document.getElementById('resumeForm');
 let buttonRow = document.getElementById('buttonRow');
 
-let 
 
 function showResume() {
     buttonSection.style.display = 'none';
@@ -51,4 +50,68 @@ function backButton(){
     }
     buttonSection.style.display = 'block';
 }
+
+//show and hide divs for feedback page
+let venue = document.getElementById('venue');
+let broadwayRadio = document.getElementById('broadwayRadio');
+let demonbreunRadio = document.getElementById('demonbreunRadio');
+let explain = document.getElementById('explain');
+
+function revealOptions(){
+    switch (venue.value){
+        case 'TR-Broadway':
+            if (demonbreunRadio.style.display == 'block'){
+                demonbreunRadio.style.display = 'none';
+            }
+            if (explain.style.display == 'block'){
+                explain.style.display = 'none';
+            }
+            broadwayRadio.style.display = 'block'
+            break;
+        case 'TR-Demonbreun':
+            if (broadwayRadio.style.display == 'block'){
+                broadwayRadio.style.display = 'none';
+            }
+            if (explain.style.display == 'block'){
+                explain.style.display = 'none';
+            }
+            demonbreunRadio.style.display = 'block'
+            break;
+        case 'Sutler':
+            if (broadwayRadio.style.display == 'block'){
+                broadwayRadio.style.display = 'none';
+            }
+            if (explain.style.display == 'block'){
+                explain.style.display = 'none';
+            }
+            if (demonbreunRadio.style.display == 'block'){
+                demonbreunRadio.style.display = 'none';
+            }
+            break;
+        case 'Other':
+            if (broadwayRadio.style.display == 'block'){
+                broadwayRadio.style.display = 'none';
+            }
+            if (demonbreunRadio.style.display == 'block'){
+                demonbreunRadio.style.display = 'none';
+            }
+            explain.style.display = 'block'
+            break;
+        case '':
+            if (broadwayRadio.style.display == 'block'){
+                broadwayRadio.style.display = 'none';
+            }
+            if (explain.style.display == 'block'){
+                explain.style.display = 'none';
+            }
+            if (demonbreunRadio.style.display == 'block'){
+                demonbreunRadio.style.display = 'none';
+            }
+            break;
+    }
+}
+
+
+
+
 

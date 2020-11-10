@@ -193,3 +193,49 @@ textarea {
     width: 50%;
 }
 
+#feedback {
+    line-height: 100%;
+}
+
+#rating label{
+    margin-left: -15px;
+}
+#rating label:last-of-type{
+    margin-left: 0;
+}
+
+#rating input{
+    display: none;
+}
+#rating label::before{
+    content: '\2606';
+}
+
+#rating input:checked,
+#rating input:checked ~ label:before,
+#rating label:hover::before, 
+#rating label:hover ~ label::before
+{
+    content: '\2605';
+}
+
+
+
+#rating {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+form p {
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 462px){
+    .flex {
+        flex-direction: column;
+    }
+    .flex div {
+        width: 100%;
+    }
+}
+
