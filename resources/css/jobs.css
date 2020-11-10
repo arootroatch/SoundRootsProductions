@@ -2,8 +2,10 @@ html, body {
     box-sizing: border-box;
     scrollbar-width: auto; /*Firefox*/
     -ms-overflow-style: auto;  /*Internet Explorer 10+*/
-    overflow-x: hidden;
+  
 }
+
+
 html::-webkit-scrollbar { /*WebKit */
     width: auto;
     height: auto;
