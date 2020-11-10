@@ -62,48 +62,61 @@ function revealOptions(){
         case 'TR-Broadway':
             if (demonbreunRadio.style.display == 'block'){
                 demonbreunRadio.style.display = 'none';
+                document.getElementById('demonbreunBtn').disabled = true;
             }
             if (explain.style.display == 'block'){
                 explain.style.display = 'none';
                 document.getElementById('other').required = false;
+                document.getElementById('other').disabled = true;
             }
             broadwayRadio.style.display = 'block'
+            document.getElementById('broadwayBtn').disabled = false;
             break;
         case 'TR-Demonbreun':
             if (broadwayRadio.style.display == 'block'){
                 broadwayRadio.style.display = 'none';
+                document.getElementById('broadwayBtn').disabled = true;
             }
             if (explain.style.display == 'block'){
                 explain.style.display = 'none';
                 document.getElementById('other').required = false;
+                document.getElementById('other').disabled = true;
             }
             demonbreunRadio.style.display = 'block'
+            document.getElementById('demonbreunBtn').disabled = false;
             break;
         case 'Sutler':
             if (broadwayRadio.style.display == 'block'){
                 broadwayRadio.style.display = 'none';
+                document.getElementById('broadwayBtn').disabled = true;
             }
             if (explain.style.display == 'block'){
                 explain.style.display = 'none';
                 document.getElementById('other').required = false;
+                document.getElementById('other').disabled = true;
             }
             if (demonbreunRadio.style.display == 'block'){
                 demonbreunRadio.style.display = 'none';
+                document.getElementById('demonbreunBtn').disabled = true;
             }
             break;
         case 'Other':
             if (broadwayRadio.style.display == 'block'){
                 broadwayRadio.style.display = 'none';
+                document.getElementById('broadwayBtn').disabled = true;
             }
             if (demonbreunRadio.style.display == 'block'){
                 demonbreunRadio.style.display = 'none';
+                document.getElementById('demonbreunBtn').disabled = true;
             }
             explain.style.display = 'block'
             document.getElementById('other').required = true;
+            document.getElementById('other').disabled = false;
             break;
         case '':
             if (broadwayRadio.style.display == 'block'){
                 broadwayRadio.style.display = 'none';
+                document.getElementById('broadwayBtn').disabled = true;
             }
             if (explain.style.display == 'block'){
                 explain.style.display = 'none';
@@ -111,6 +124,7 @@ function revealOptions(){
             }
             if (demonbreunRadio.style.display == 'block'){
                 demonbreunRadio.style.display = 'none';
+                document.getElementById('demonbreunBtn').disabled = true;
             }
             break;
     }
