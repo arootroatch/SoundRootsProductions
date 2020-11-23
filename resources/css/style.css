@@ -944,7 +944,6 @@ form {
     line-height: 250%;
     color: black;
     padding-left: 10px;
-    background-color: rgb(199, 199, 199);
 }
 
 textarea {
@@ -954,7 +953,6 @@ textarea {
     font-size: 50%;
     font-family: 'Titillium';
     padding-left: 10px;
-    background-color: rgb(199, 199, 199);
 
 }
 
