@@ -874,7 +874,7 @@
         </section>
         <section id="contact">
             <h2>Contact Us</h2>
-            <form name="contact-form" data-netlify="true" netlify-honeypot="bot-field" id="contactForm" method="post">
+            <form name="contact-form" data-netlify-recaptcha="true" data-netlify="true" netlify-honeypot="bot-field" id="contactForm" method="post">
                 <div class="form-group">
                     <label id="name-label" for="name">Name</label>
                     <input type="text" id="name" name="name" class="form-control" placeholder="Please enter your name" required>
@@ -890,6 +890,7 @@
                     <p>How can we help?</p>
                     <textarea name="comments" placeholder="Tell us about your needs" required></textarea>
                 </div>
+                <div data-netlify-recaptcha="true"></div>
                 <div class="form-group">
                     <button id="submit" type="submit" class="btn">
                         Submit
