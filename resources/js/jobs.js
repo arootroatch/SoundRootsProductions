@@ -129,13 +129,98 @@ function revealOptions(){
             break;
     }
 }
-let i = 2
+let radio = document.getElementsByName('soundcheck-rating');
+// let radioArray = [].slice.call(radio, 0);
+let x = parseInt(radio[0].getAttribute('value'));
+console.log(radio);
 
-for (let i = 2; i<6; i++) {
-    if (document.getElementById('soundcheck' + i).checked == true) {
-        document.getElementById('sc' + (i-1)).pseu;
+
+function serviceRadio(){
+    let radio = document.getElementsByName('service-rating');
+    for (let i = 0; i<radio.length; i++) {
+        let x = parseInt(radio[i].getAttribute('value'));
+        if (radio[i].checked) {
+            for (let j = (x-1); j>0; j--) {
+                document.getElementById('cs' + j).classList.add('solid-star');
+            }
+            for (let k = (x+1); k<radio.length; k++) {
+                document.getElementById('cs' + k).classList.remove('solid-star');
+            }
+        }
     }
 }
+function soundcheckRadio(){
+    let radio = document.getElementsByName('soundcheck-rating');
+    for (let i = 0; i<radio.length; i++) {
+        let x = parseInt(radio[i].getAttribute('value'));
+        if (radio[i].checked) {
+            for (let j = (x-1); j>0; j--) {
+                document.getElementById('sc' + j).classList.add('solid-star');
+            }
+            for (let k = (x+1); k<radio.length; k++) {
+                document.getElementById('sc' + k).classList.remove('solid-star');
+            }
+        }
+    }
+}
+function overallRadio(){
+    let radio = document.getElementsByName('rating');
+    for (let i = 0; i<radio.length; i++) {
+        let x = parseInt(radio[i].getAttribute('value'));
+        if (radio[i].checked) {
+            for (let j = (x-1); j>0; j--) {
+                document.getElementById('all' + j).classList.add('solid-star');
+            }
+            for (let k = (x+1); k<radio.length; k++) {
+                document.getElementById('all' + k).classList.remove('solid-star');
+            }
+        }
+    }
+}
+function monitorRadio(){
+    let radio = document.getElementsByName('monitor-rating');
+    for (let i = 0; i<radio.length; i++) {
+        let x = parseInt(radio[i].getAttribute('value'));
+        if (radio[i].checked) {
+            for (let j = (x-1); j>0; j--) {
+                document.getElementById('mon' + j).classList.add('solid-star');
+            }
+            for (let k = (x+1); k<radio.length; k++) {
+                document.getElementById('mon' + k).classList.remove('solid-star');
+            }
+        }
+    }
+}
+function fohRadio(){
+    let radio = document.getElementsByName('foh-rating');
+    for (let i = 0; i<radio.length; i++) {
+        let x = parseInt(radio[i].getAttribute('value'));
+        if (radio[i].checked) {
+            for (let j = (x-1); j>0; j--) {
+                document.getElementById('fr' + j).classList.add('solid-star');
+            }
+            for (let k = (x+1); k<radio.length; k++) {
+                document.getElementById('fr' + k).classList.remove('solid-star');
+            }
+        }
+    }
+}
+function generalRadio(){
+    let radio = document.getElementsByName('general-rating');
+    for (let i = 0; i<radio.length; i++) {
+        let x = parseInt(radio[i].getAttribute('value'));
+        if (radio[i].checked) {
+            for (let j = (x-1); j>0; j--) {
+                document.getElementById('gen' + j).classList.add('solid-star');
+            }
+            for (let k = (x+1); k<radio.length; k++) {
+                document.getElementById('gen' + k).classList.remove('solid-star');
+            }
+        }
+    }
+}
+
+
 
 
 

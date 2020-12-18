@@ -252,6 +252,10 @@ legend {
     direction: rtl;
 }
 
+fieldset {
+    margin-bottom: 10px;
+}
+
 form p {
     margin-bottom: 5px;
 }

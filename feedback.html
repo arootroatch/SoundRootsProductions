@@ -104,69 +104,186 @@
                 </div>
                 <br>
                 <div class="form-group">
+                    <p>H<span class="smallCaps">ow would you rate your engineer's customer service skills?</span></p>
+                    <fieldset class="rating" onclick="serviceRadio()">
+                        <legend>Customer service rating: </legend>
+                        <label>
+                            <input type="radio" name="service-rating" value="5" id="service5" class="input-radio">
+                            <span id="cs5" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="service-rating" value="4" id="service4" class="input-radio">
+                            <span id="cs4" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="service-rating" value="3" id="service3" class="input-radio">
+                            <span id="cs3" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="service-rating" value="2" id="service2" class="input-radio">
+                            <span id="cs2" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="service-rating" value="1" id="service1" class="input-radio" required>
+                            <span id="cs1" class=""></span>
+                        </label>
+                    </fieldset>
+                    <p>C<span class="smallCaps">omments about customer service (optional):</span></p>
+                    <textarea name="customer-service-comments" placeholder="e.g. They were very friendly, and my in-ears sounded better than ever!"></textarea>
+                </div>
+                <br>
+                <div class="form-group">
                     <p>H<span class="smallCaps">ow efficiently did your engineer run your sound check?</span></p>
-                    <fieldset class="rating">
+                    <fieldset class="rating" onclick="soundcheckRadio()">
                         <legend>Soundcheck rating: </legend>
                         <label>
                             <input type="radio" name="soundcheck-rating" value="5" id="soundcheck5" class="input-radio">
-                            <span id="sc5" class="solid-star"></span>
+                            <span id="sc5" class=""></span>
                         </label>
                         <label>
-                            <input type="radio" name="soundcheck-rating" value="4" id="soundcheck4" class="input-radio" checked>
-                            <span id="sc4" class="solid-star"></span>
+                            <input type="radio" name="soundcheck-rating" value="4" id="soundcheck4" class="input-radio">
+                            <span id="sc4" class=""></span>
                         </label>
                         <label>
                             <input type="radio" name="soundcheck-rating" value="3" id="soundcheck3" class="input-radio">
-                            <span id="sc3" class="solid-star"></span>
+                            <span id="sc3" class=""></span>
                         </label>
                         <label>
                             <input type="radio" name="soundcheck-rating" value="2" id="soundcheck2" class="input-radio">
-                            <span id="sc2" class="solid-star"></span>
+                            <span id="sc2" class=""></span>
                         </label>
                         <label>
                             <input type="radio" name="soundcheck-rating" value="1" id="soundcheck1" class="input-radio" required>
-                            <span id="sc1" class="solid-star"></span>
+                            <span id="sc1" class=""></span>
                         </label>
                     </fieldset>
-                </div>
-                <div class="form-group">
-                    <p>W<span class="smallCaps">hat did your engineer do well?</span></p>
-                    <textarea name="well-done" placeholder="e.g. They were very friendly, and my in-ears sounded better than ever!" required></textarea>
+                    <p>C<span class="smallCaps">omments about your sound check (optional):</span></p>
+                    <textarea name="soundcheck-comments" placeholder="e.g. They were very friendly, and my in-ears sounded better than ever!"></textarea>
                 </div>
                 <br>
                 <div class="form-group">
-                    <p>I<span class="smallCaps">n what ways would you like to see your engineer improve?</span></p>
-                    <textarea name="improvements" placeholder="e.g. They should work on getting faster at soundcheck" required></textarea>
+                    <p>H<span class="smallCaps">ow were your monitor mixes?</span></p>
+                    <fieldset class="rating" onclick="monitorRadio()">
+                        <legend>Monitor mix rating: </legend>
+                        <label>
+                            <input type="radio" name="monitor-rating" value="5" id="monitor5" class="input-radio">
+                            <span id="mon5" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="monitor-rating" value="4" id="monitor4" class="input-radio">
+                            <span id="mon4" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="monitor-rating" value="3" id="monitor3" class="input-radio">
+                            <span id="mon3" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="monitor-rating" value="2" id="monitor2" class="input-radio">
+                            <span id="mon2" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="monitor-rating" value="1" id="monitor1" class="input-radio" required>
+                            <span id="mon1" class=""></span>
+                        </label>
+                    </fieldset>
+                    <p>C<span class="smallCaps">omments about your monitor mixes (optional):</span></p>
+                    <textarea name="monitor-comments" placeholder="e.g. They were very friendly, and my in-ears sounded better than ever!"></textarea>
                 </div>
                 <br>
                 <div class="form-group">
-                    <p>D<span class="smallCaps">o you have any additional comments or suggestions about your experience?</span></p>
-                    <textarea name="comments" placeholder="e.g. My monitor wedge stopped working halfway through my set.&#10This is my favorite venue to play!"></textarea>
+                    <p>I<span class="smallCaps">f you had the opportunity to hear the front of house mix, how would you rate it?</span></p>
+                    <fieldset class="rating" onclick="fohRadio()">
+                        <legend>FOH mix rating: </legend>
+                        <label>
+                            <input type="radio" name="foh-rating" value="5" id="foh5" class="input-radio">
+                            <span id="fr5" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="foh-rating" value="4" id="foh4" class="input-radio">
+                            <span id="fr4" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="foh-rating" value="3" id="foh3" class="input-radio">
+                            <span id="fr3" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="foh-rating" value="2" id="foh2" class="input-radio">
+                            <span id="fr2" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="foh-rating" value="1" id="foh1" class="input-radio">
+                            <span id="fr1" class=""></span>
+                        </label>
+                    </fieldset>
+                    <p>C<span class="smallCaps">omments about the FOH mix (optional):</span></p>
+                    <textarea name="FOH-comments" placeholder="e.g. They were very friendly, and my in-ears sounded better than ever!"></textarea>
+                </div>
+                <br>
+                <div class="form-group">
+                    <p>D<span class="smallCaps">o you have any additional comments about what your engineer did well or ways you would like to see them improve?</span></p>
+                    <textarea name="Engineer-comments" placeholder="e.g. They should work on getting faster at soundcheck" required></textarea>
+                </div>
+                <br>
+                <div class="form-group">
+                    <p>D<span class="smallCaps">id you notice any broken equipment?</span></p>
+                    <textarea name="broken-equipment" placeholder="e.g. My monitor wedge stopped working halfway through my set.&#10This is my favorite venue to play!" required></textarea>
+                </div>
+                <br>
+                <div class="form-group">
+                    <p>D<span class="smallCaps">o you have any general comments or suggestions about production at this venue?</span></p>
+                    <textarea name="general-comments" placeholder="e.g. My monitor wedge stopped working halfway through my set.&#10This is my favorite venue to play!" required></textarea>
                 </div>
                 <br>
                 <div class="form-group">
                     <p>H<span class="smallCaps">ow would you rate your audio engineer overall?</span></p>
-                    <fieldset class="rating">
-                        <legend>Overall rating: </legend>
+                    <fieldset class="rating" onclick="overallRadio()">
+                        <legend>Overall engineer rating: </legend>
                         <label>
                             <input type="radio" name="rating" value="5" id="overall5" class="input-radio">
-                            <span class="solid-star"></span>
+                            <span class="" id="all5"></span>
                         </label>
                         <label>
-                            <input type="radio" name="rating" value="4" id="overall4" class="input-radio" checked>
-                            <span class="solid-star"></span>
+                            <input type="radio" name="rating" value="4" id="overall4" class="input-radio">
+                            <span class="" id="all4"></span>
                         </label>
                         <label>
                             <input type="radio" name="rating" value="3" id="overall3" class="input-radio">
-                            <span class="solid-star"></span>
+                            <span class="" id="all3"></span>
                         </label>
                         <label>
                             <input type="radio" name="rating" value="2" id="overall2" class="input-radio">
-                            <span class="solid-star"></span>
+                            <span class="" id="all2"></span>
                         </label>
                         <label>
                             <input type="radio" name="rating" value="1" id="overall1" class="input-radio" required>
-                            <span class="solid-star"></span>
+                            <span class="" id="all1"></span>
+                        </label>
+                    </fieldset>
+                </div>
+                <br>
+                <div class="form-group">
+                    <p>H<span class="smallCaps">ow would you rate your overall experience playing this venue?</span></p>
+                    <fieldset class="rating" onclick="generalRadio()">
+                        <legend>Overall venue rating: </legend>
+                        <label>
+                            <input type="radio" name="general-rating" value="5" id="general5" class="input-radio">
+                            <span class="" id="gen5"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="general-rating" value="4" id="general4" class="input-radio">
+                            <span class="" id="gen4"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="general-rating" value="3" id="general3" class="input-radio">
+                            <span class="" id="gen3"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="general-rating" value="2" id="general2" class="input-radio">
+                            <span class="" id="gen2"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="general-rating" value="1" id="general1" class="input-radio" required>
+                            <span class="" id="gen1"></span>
                         </label>
                     </fieldset>
                 </div>
