@@ -104,6 +104,32 @@
                 </div>
                 <br>
                 <div class="form-group">
+                    <p>H<span class="smallCaps">ow efficiently did your engineer run your sound check?</span></p>
+                    <fieldset class="rating">
+                        <legend>Soundcheck rating: </legend>
+                        <label>
+                            <input type="radio" name="soundcheck-rating" value="5" id="soundcheck5" class="input-radio">
+                            <span id="sc5" class="solid-star"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="soundcheck-rating" value="4" id="soundcheck4" class="input-radio" checked>
+                            <span id="sc4" class="solid-star"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="soundcheck-rating" value="3" id="soundcheck3" class="input-radio">
+                            <span id="sc3" class="solid-star"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="soundcheck-rating" value="2" id="soundcheck2" class="input-radio">
+                            <span id="sc2" class="solid-star"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="soundcheck-rating" value="1" id="soundcheck1" class="input-radio" required>
+                            <span id="sc1" class="solid-star"></span>
+                        </label>
+                    </fieldset>
+                </div>
+                <div class="form-group">
                     <p>W<span class="smallCaps">hat did your engineer do well?</span></p>
                     <textarea name="well-done" placeholder="e.g. They were very friendly, and my in-ears sounded better than ever!" required></textarea>
                 </div>
@@ -120,18 +146,29 @@
                 <br>
                 <div class="form-group">
                     <p>H<span class="smallCaps">ow would you rate your audio engineer overall?</span></p>
-                    <span id="rating">
-                        <input type="radio" name="rating" value="5" id="five" class="input-radio">
-                        <label for="five"></label>
-                        <input type="radio" name="rating" value="4" id="four" class="input-radio" checked>
-                        <label for="four"></label>
-                        <input type="radio" name="rating" value="3" id="three" class="input-radio">
-                        <label for="three"></label>
-                        <input type="radio" name="rating" value="2" id="two" class="input-radio">
-                        <label for="two"></label>
-                        <input type="radio" name="rating" value="1" id="one" class="input-radio" required>
-                        <label for="one"></label>
-                    </span>
+                    <fieldset class="rating">
+                        <legend>Overall rating: </legend>
+                        <label>
+                            <input type="radio" name="rating" value="5" id="overall5" class="input-radio">
+                            <span class="solid-star"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="rating" value="4" id="overall4" class="input-radio" checked>
+                            <span class="solid-star"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="rating" value="3" id="overall3" class="input-radio">
+                            <span class="solid-star"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="rating" value="2" id="overall2" class="input-radio">
+                            <span class="solid-star"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="rating" value="1" id="overall1" class="input-radio" required>
+                            <span class="solid-star"></span>
+                        </label>
+                    </fieldset>
                 </div>
                 <br>
                 <div class="form-group">

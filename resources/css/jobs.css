@@ -203,34 +203,51 @@ textarea {
     line-height: 100%;
 }
 
-#rating label{
-    margin-left: -15px;
-}
-#rating label:last-of-type{
-    margin-left: 0;
+.rating {
+    border: none;
+    text-align: left;
 }
 
-#rating input{
+legend {
     display: none;
 }
 
-#rating input:checked ~ label:before{
+
+
+.rating label{
+    margin-left: -15px;
+    display: inline-block;
+    width: 30px;
+}
+.rating label:last-of-type{
+    margin-left: 0;
+}
+
+.rating input{
+    display: none;
+}
+
+.rating input:checked ~ span:before{
     content: '\2605'; /* Solid Star */
 }
 
-#rating label::before{
+.rating span::before{
     content: '\2606'; /*hollow star*/
 }
 
 
-#rating label:hover::before, 
-#rating label:hover ~ label::before
+.rating label:hover ~ label > span:before,
+.rating label:hover > span::before
 {
     content: '\2605'; /*Solid Star*/
 }
 
+.solid-star::before{
+    content: '\2605' !important;
+}
 
-#rating {
+
+.rating {
     unicode-bidi: bidi-override;
     direction: rtl;
 }

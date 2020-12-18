@@ -129,6 +129,14 @@ function revealOptions(){
             break;
     }
 }
+let i = 2
+
+for (let i = 2; i<6; i++) {
+    if (document.getElementById('soundcheck' + i).checked == true) {
+        document.getElementById('sc' + (i-1)).pseu;
+    }
+}
+
 
 
 
