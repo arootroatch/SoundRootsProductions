@@ -191,20 +191,7 @@ function monitorRadio(){
         }
     }
 }
-function fohRadio(){
-    let radio = document.getElementsByName('foh-rating');
-    for (let i = 0; i<radio.length; i++) {
-        let x = parseInt(radio[i].getAttribute('value'));
-        if (radio[i].checked) {
-            for (let j = (x-1); j>0; j--) {
-                document.getElementById('fr' + j).classList.add('solid-star');
-            }
-            for (let k = (x+1); k<radio.length; k++) {
-                document.getElementById('fr' + k).classList.remove('solid-star');
-            }
-        }
-    }
-}
+
 function generalRadio(){
     let radio = document.getElementsByName('general-rating');
     for (let i = 0; i<radio.length; i++) {
