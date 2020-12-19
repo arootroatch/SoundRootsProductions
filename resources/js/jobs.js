@@ -164,7 +164,7 @@ function soundcheckRadio(){
     }
 }
 function overallRadio(){
-    let radio = document.getElementsByName('rating');
+    let radio = document.getElementsByName('engineer-rating');
     for (let i = 0; i<radio.length; i++) {
         let x = parseInt(radio[i].getAttribute('value'));
         if (radio[i].checked) {
@@ -178,7 +178,7 @@ function overallRadio(){
     }
 }
 function monitorRadio(){
-    let radio = document.getElementsByName('monitor-rating');
+    let radio = document.getElementsByName('mix-rating');
     for (let i = 0; i<radio.length; i++) {
         let x = parseInt(radio[i].getAttribute('value'));
         if (radio[i].checked) {
