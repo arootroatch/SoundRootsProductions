@@ -49,11 +49,34 @@ main {
 
 
 #btnContainer {
-    margin: 50px auto;
+    margin: 10px auto;
     text-align: center;
     font-family: 'OPTIAgency-Gothic';
     font-size: 150%;
     letter-spacing: 5px;
+}
+
+#error {
+    padding-top: 10px;
+    text-align: center !important;
+    color: red;
+}
+
+#city-box {
+    font-family: 'OPTIAgency-Gothic';
+    letter-spacing: 5px;
+    color: rgb(224, 224, 224);
+    display: block;
+    text-align: left;
+    text-shadow: 3px 3px 5px rgb(0, 68, 255);
+    width: 65%;
+    background-color: rgba(0,0,0,0.5);
+    font-size: 150%;
+    padding: 10px 75px;
+}
+
+#city {
+    margin-top: 10px;
 }
 
 #or {
@@ -101,9 +124,12 @@ form {
     font-size: 80%;
 }
 
+
+
 .form-group {
     width: 80%;
     margin: 0 auto;
+
 }
 
 .form-control {
