@@ -23,30 +23,72 @@ function toggleNestedNav(){
 // Show and hide sections 
 
 let buttonSection = document.getElementById('buttonSection');
+let error = document.getElementById('error');
+let city = document.getElementById('city').value;
 let application = document.getElementById('applicationSection');
 let resumeForm = document.getElementById('resumeForm');
+let applicationMemphis = document.getElementById('applicationSectionMemphis');
+let resumeFormMemphis = document.getElementById('resumeFormMemphis');
 let buttonRow = document.getElementById('buttonRow');
+
+function updateVariable() {
+    city = document.getElementById('city').value;
+    console.log(city);
+}
 
 
 function showResume() {
-    buttonSection.style.display = 'none';
-    resumeForm.style.display = 'block';
-    buttonRow.style.display = 'block';
+    switch (city) {
+        case '':
+            error.style.display = 'block';
+            break;
+        case 'Nashville':
+            buttonSection.style.display = 'none';
+            resumeForm.style.display = 'block';
+            buttonRow.style.display = 'block';
+            break;
+        case 'Memphis':
+            buttonSection.style.display = 'none';
+            resumeFormMemphis.style.display = 'block';
+            buttonRow.style.display = 'block';
+            break;    
+    } 
 }
 
 function showApplication(){
-    buttonSection.style.display = 'none';
-    application.style.display = 'block';
-    buttonRow.style.display = 'block';
+    switch (city) {
+        case '':
+            error.style.display = 'block';
+            break;
+        case 'Nashville':
+            application.style.display = 'block';
+            buttonSection.style.display = 'none';
+            buttonRow.style.display = 'block';
+            break;
+        case 'Memphis':
+            applicationMemphis.style.display = 'block';
+            buttonSection.style.display = 'none';
+            buttonRow.style.display = 'block';
+            break;    
+    }
 }
 
 function backButton(){
     buttonRow.style.display = 'none';
+    if (error.style.display == 'block'){
+        error.style.display = 'none';
+    }
     if (application.style.display == 'block') {
         application.style.display = 'none';
-    }
+    } else
     if (resumeForm.style.display == 'block'){
         resumeForm.style.display = 'none';
+    } else
+    if (applicationMemphis.style.display == 'block') {
+        applicationMemphis.style.display = 'none';
+    } else
+    if (resumeFormMemphis.style.display == 'block'){
+        resumeFormMemphis.style.display = 'none';
     }
     buttonSection.style.display = 'block';
 }

@@ -56,12 +56,12 @@
         </div>
         <section id="buttonSection">
             <div class="row">
-                <p>Sound Roots Productions provides the audio engineering and lighting services for the Nashville venues Tin Roof Broadway, Tin Roof Demonbreun, and the Sutler year-round, as well as various other gig opportunities throughout the year. Are you ready to join the team? </p>
+                <p>Sound Roots Productions provides the audio engineering and lighting services for both Tin Roofs in Nashville, the Sutler in Nashville, and the Tin Roof in Memphis, as well as various other gig opportunities throughout the year. Are you ready to join the team? </p>
                 <!-- ERROR SELECT CITY -->
                 <p id="error" class="hidden">Please select a city.</p>
                 <div class="form-group" id="city-box">
                     <label id="city-label" for="city">W<span class="smallCaps">hich city do you live in?</span></label>
-                    <select id="city" name="city" class="form-control" required onchange="revealOptions()">
+                    <select id="city" name="city" class="form-control" required onchange="updateVariable()">
                         <option value="" disabled selected>
                             --Select City--
                         </option>
@@ -97,11 +97,6 @@
                 <br>
                 <div class="hidden">
                     <label for="bot-field">I'm a robot: <input name="bot-field"></label>
-                </div>
-                <div class="form-group radio">
-                    <p>D<span class="smallCaps">o you live in the </span>N<span class="smallCaps">ashville, </span>TN <span class="smallCaps">area?</span></p>
-                    <label><input type="radio" name="residence" value="yes" class="input-radio" checked required>Yes</label><br>
-                    <label><input type="radio" name="residence" value="no" class="input-radio">No</label><br>
                 </div>
                 <div class="form-group checkbox">
                     <p>W<span class="smallCaps">hich location(s) are you interested in working at?</span> <span class="smallCaps">(Select all that apply)</span></p>
@@ -146,11 +141,6 @@
                     <input type="date" id="date" name="date" class="form-control" placeholder="Please enter your age"> 
                 </div>
                 <br>
-                <div class="form-group radio">
-                    <p>D<span class="smallCaps">o you live in the </span>N<span class="smallCaps">ashville, </span>TN <span class="smallCaps">area?</span></p>
-                    <label><input type="radio" name="residence" value="yes" class="input-radio" checked required>Yes</label><br>
-                    <label><input type="radio" name="residence" value="no" class="input-radio">No</label><br>
-                </div>
                 <div class="form-group checkbox">
                     <p>W<span class="smallCaps">hich location(s) are you interested in working at?</span> <span class="smallCaps">(Select all that apply)</span></p>
                     <label><input name="location[]" value="TRBroadway" type="checkbox" class="input-checkbox"/>Tin Roof Broadway</label>
@@ -205,19 +195,6 @@
                 <div class="hidden">
                     <label for="bot-field">I'm a robot: <input name="bot-field"></label>
                 </div>
-                <div class="form-group radio">
-                    <p>D<span class="smallCaps">o you live in the </span>N<span class="smallCaps">ashville, </span>TN <span class="smallCaps">area?</span></p>
-                    <label><input type="radio" name="residence" value="yes" class="input-radio" checked required>Yes</label><br>
-                    <label><input type="radio" name="residence" value="no" class="input-radio">No</label><br>
-                </div>
-                <div class="form-group checkbox">
-                    <p>W<span class="smallCaps">hich location(s) are you interested in working at?</span> <span class="smallCaps">(Select all that apply)</span></p>
-                    <label><input name="location[]" value="TRBroadway" type="checkbox" class="input-checkbox"/>Tin Roof Broadway</label>
-                    <label><input name="location[]" value="TRDemonbreun" type="checkbox" class="input-checkbox"/>Tin Roof Demonbreun</label>
-                    <label><input name="location[]" value="Sutler" type="checkbox" class="input-checkbox"/>The Sutler</label>
-                    <label><input name="location[]" value="Other" type="checkbox" class="input-checkbox"/>Other gig/travel opportunities</label>
-                </div>
-                <br>
                 <div class="form-group">
                     <label for="resume">P<span class="smallCaps">lease upload your resume in </span>PDF: </label><br>
                     <input type="file" name="resume" id="resume" accept=".pdf" required>
@@ -238,8 +215,8 @@
                 </div>
             </form>
         </section>
-        <section id="applicationSection" class="hidden">
-            <form name="application" data-netlify="true" netlify-honeypot="bot-field" id="application" method="post">
+        <section id="applicationSectionMemphis" class="hidden">
+            <form name="applicationMemphis" data-netlify="true" netlify-honeypot="bot-field" id="applicationMemphis" method="post">
                 <div class="form-group">
                     <label id="name-label" for="name">N<span class="smallCaps">ame</span></label>
                     <input type="text" id="name" name="name" class="form-control" placeholder="Please enter your name" required>
@@ -253,22 +230,9 @@
                     <input type="date" id="date" name="date" class="form-control" placeholder="Please enter your age"> 
                 </div>
                 <br>
-                <div class="form-group radio">
-                    <p>D<span class="smallCaps">o you live in the </span>N<span class="smallCaps">ashville, </span>TN <span class="smallCaps">area?</span></p>
-                    <label><input type="radio" name="residence" value="yes" class="input-radio" checked required>Yes</label><br>
-                    <label><input type="radio" name="residence" value="no" class="input-radio">No</label><br>
-                </div>
-                <div class="form-group checkbox">
-                    <p>W<span class="smallCaps">hich location(s) are you interested in working at?</span> <span class="smallCaps">(Select all that apply)</span></p>
-                    <label><input name="location[]" value="TRBroadway" type="checkbox" class="input-checkbox"/>Tin Roof Broadway</label>
-                    <label><input name="location[]" value="TRDemonbreun" type="checkbox" class="input-checkbox"/>Tin Roof Demonbreun</label>
-                    <label><input name="location[]" value="Sutler" type="checkbox" class="input-checkbox"/>The Sutler</label>
-                    <label><input name="location[]" value="Other" type="checkbox" class="input-checkbox"/>Other gig/travel opportunities</label>
-                </div>
                 <div class="hidden">
                     <label for="bot-field">I'm a robot: <input name="bot-field"></label>
                 </div>
-                <br>
                 <div class="form-group">
                     <p>P<span class="smallCaps">lease speak briefly about your relevant educational background:</span></p>
                     <textarea name="education" placeholder="e.g. Bachelor of Science in Audio Technology from MTSU, graduated Spring 2016"></textarea>
