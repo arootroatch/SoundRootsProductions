@@ -33,7 +33,6 @@ let buttonRow = document.getElementById('buttonRow');
 
 function updateVariable() {
     city = document.getElementById('city').value;
-    console.log(city);
 }
 
 
@@ -98,6 +97,26 @@ let venue = document.getElementById('venue');
 let broadwayRadio = document.getElementById('broadwayRadio');
 let demonbreunRadio = document.getElementById('demonbreunRadio');
 let explain = document.getElementById('explain');
+let memphisForm = document.getElementById('memphisForm');
+let nashvilleForm = document.getElementById('nashvilleForm'); 
+
+function revealCity(){
+    city = document.getElementById('city').value;
+    switch (city){
+        case 'Nashville':
+            if (memphisForm.style.display == 'block'){
+                memphisForm.style.display = 'none';
+            }
+            nashvilleForm.style.display = 'block'
+            break;
+        case 'Memphis':
+            if (nashvilleForm.style.display == 'block'){
+                nashvilleForm.style.display = 'none';
+            }
+            memphisForm.style.display = 'block';
+            break; 
+    }
+}
 
 function revealOptions(){
     switch (venue.value){
