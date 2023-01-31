@@ -64,6 +64,7 @@
                         </option>
                         <option value="Nashville">Nashville</option>
                         <option value="Memphis">Memphis</option>
+                        <option value="Birmingham">Birmingham</option>
                     </select> 
                 </div>
             </div>
@@ -274,6 +275,184 @@
             </form>
         </section>
         <section id="memphisForm" class="hidden">
+            <form name="feedback" data-netlify="true" netlify-honeypot="bot-field" id="feedback" method="post">
+                <div class="form-group">
+                    <label id="name-label" for="band-name">B<span class="smallCaps">and name</span></label>
+                    <input type="text" id="band-name" name="band-name" class="form-control" placeholder="Chris Young" required>
+                </div>
+                <div class="form-group flex">
+                    <div id="dateDiv">
+                        <label id="set-date-label" for="set-date">D<span class="smallCaps">ate of set</span></label>
+                        <input type="date" id="set-date" name="set-date" class="form-control" required>
+                    </div>
+                    <div>
+                        <label for="time" id="time-label">T<span class="smallCaps">ime of set</span></label>
+                        <input type="time" name="time" id="time" class="form-control" required> 
+                    </div>
+                </div>
+                <div class="hidden">
+                    <label for="bot-field">I'm a robot: <input name="bot-field"></label>
+                </div>
+                <br>
+                <div class="form-group">
+                    <p>H<span class="smallCaps">ow would you rate your engineer's customer service skills?</span></p>
+                    <fieldset class="rating" onclick="serviceRadio()">
+                        <legend>Customer service rating: </legend>
+                        <label>
+                            <input type="radio" name="service-rating" value="5" id="service5" class="input-radio">
+                            <span id="cs5" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="service-rating" value="4" id="service4" class="input-radio">
+                            <span id="cs4" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="service-rating" value="3" id="service3" class="input-radio">
+                            <span id="cs3" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="service-rating" value="2" id="service2" class="input-radio">
+                            <span id="cs2" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="service-rating" value="1" id="service1" class="input-radio" required>
+                            <span id="cs1" class=""></span>
+                        </label>
+                    </fieldset>
+                    <p>C<span class="smallCaps">omments about customer service (optional):</span></p>
+                    <textarea name="customer-service-comments" placeholder="e.g. They were very friendly, learned everyone's name, and made us feel very welcome!"></textarea>
+                </div>
+                <br>
+                <div class="form-group">
+                    <p>H<span class="smallCaps">ow efficiently did your engineer run your sound check?</span></p>
+                    <fieldset class="rating" onclick="soundcheckRadio()">
+                        <legend>Soundcheck rating: </legend>
+                        <label>
+                            <input type="radio" name="soundcheck-rating" value="5" id="soundcheck5" class="input-radio">
+                            <span id="sc5" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="soundcheck-rating" value="4" id="soundcheck4" class="input-radio">
+                            <span id="sc4" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="soundcheck-rating" value="3" id="soundcheck3" class="input-radio">
+                            <span id="sc3" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="soundcheck-rating" value="2" id="soundcheck2" class="input-radio">
+                            <span id="sc2" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="soundcheck-rating" value="1" id="soundcheck1" class="input-radio" required>
+                            <span id="sc1" class=""></span>
+                        </label>
+                    </fieldset>
+                    <p>C<span class="smallCaps">omments about your sound check (optional):</span></p>
+                    <textarea name="soundcheck-comments" placeholder="e.g. They really knew how to get the band to pay attention in order to dial in everyone's mixes very quickly!"></textarea>
+                </div>
+                <br>
+                <div class="form-group">
+                    <p>H<span class="smallCaps">ow was the mix quality, both front-of-house and monitors?</span></p>
+                    <fieldset class="rating" onclick="monitorRadio()">
+                        <legend>Monitor mix rating: </legend>
+                        <label>
+                            <input type="radio" name="mix-rating" value="5" id="monitor5" class="input-radio">
+                            <span id="mon5" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="mix-rating" value="4" id="monitor4" class="input-radio">
+                            <span id="mon4" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="mix-rating" value="3" id="monitor3" class="input-radio">
+                            <span id="mon3" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="mix-rating" value="2" id="monitor2" class="input-radio">
+                            <span id="mon2" class=""></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="mix-rating" value="1" id="monitor1" class="input-radio" required>
+                            <span id="mon1" class=""></span>
+                        </label>
+                    </fieldset>
+                    <p>C<span class="smallCaps">omments about the mixes (optional):</span></p>
+                    <textarea name="mix-comments" placeholder="e.g. Front of house sounded great! My in-ears took a while to get dialed in, but they were great afterward."></textarea>
+                </div>
+                <br>
+                <div class="form-group">
+                    <p>D<span class="smallCaps">id you notice any equipment that needs attention?</span></p>
+                    <textarea name="broken-equipment" placeholder="e.g. The snare stand is stripped and the drum wedge monitor has no high end." required></textarea>
+                </div>
+                <br>
+                <div class="form-group">
+                    <p>D<span class="smallCaps">o you have any general comments or suggestions about production at this venue?</span></p>
+                    <textarea name="venue-comments" placeholder="e.g. It would be great if...&#10This is my favorite venue to play!" required></textarea>
+                </div>
+                <br>
+                <div class="form-group">
+                    <p>H<span class="smallCaps">ow would you rate your audio engineer overall?</span></p>
+                    <fieldset class="rating" onclick="overallRadio()">
+                        <legend>Overall engineer rating: </legend>
+                        <label>
+                            <input type="radio" name="engineer-rating" value="5" id="overall5" class="input-radio">
+                            <span class="" id="all5"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="engineer-rating" value="4" id="overall4" class="input-radio">
+                            <span class="" id="all4"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="engineer-rating" value="3" id="overall3" class="input-radio">
+                            <span class="" id="all3"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="engineer-rating" value="2" id="overall2" class="input-radio">
+                            <span class="" id="all2"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="engineer-rating" value="1" id="overall1" class="input-radio" required>
+                            <span class="" id="all1"></span>
+                        </label>
+                    </fieldset>
+                </div>
+                <br>
+                <div class="form-group">
+                    <p>H<span class="smallCaps">ow would you rate your overall experience playing this venue?</span></p>
+                    <fieldset class="rating" onclick="generalRadio()">
+                        <legend>Overall venue rating: </legend>
+                        <label>
+                            <input type="radio" name="general-rating" value="5" id="general5" class="input-radio">
+                            <span class="" id="gen5"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="general-rating" value="4" id="general4" class="input-radio">
+                            <span class="" id="gen4"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="general-rating" value="3" id="general3" class="input-radio">
+                            <span class="" id="gen3"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="general-rating" value="2" id="general2" class="input-radio">
+                            <span class="" id="gen2"></span>
+                        </label>
+                        <label>
+                            <input type="radio" name="general-rating" value="1" id="general1" class="input-radio" required>
+                            <span class="" id="gen1"></span>
+                        </label>
+                    </fieldset>
+                </div>
+                <br>
+                <div class="form-group">
+                    <button id="submit" type="submit" class="btn">
+                        Submit
+                    </button> 
+                </div>
+            </form>
+        </section>
+        <section id="bhamForm" class="hidden">
             <form name="feedback" data-netlify="true" netlify-honeypot="bot-field" id="feedback" method="post">
                 <div class="form-group">
                     <label id="name-label" for="band-name">B<span class="smallCaps">and name</span></label>
