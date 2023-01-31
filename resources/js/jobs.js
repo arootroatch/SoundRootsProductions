@@ -29,6 +29,8 @@ let application = document.getElementById('applicationSection');
 let resumeForm = document.getElementById('resumeForm');
 let applicationMemphis = document.getElementById('applicationSectionMemphis');
 let resumeFormMemphis = document.getElementById('resumeFormMemphis');
+let applicationBham = document.getElementById('applicationSectionBham');
+let resumeFormBham = document.getElementById('resumeFormBham');
 let buttonRow = document.getElementById('buttonRow');
 
 function updateVariable() {
@@ -51,6 +53,11 @@ function showResume() {
             resumeFormMemphis.style.display = 'block';
             buttonRow.style.display = 'block';
             break;    
+        case 'Birmingham':
+            buttonSection.style.display = 'none';
+            resumeFormBham.style.display = 'block';
+            buttonRow.style.display = 'block';
+            break;    
     } 
 }
 
@@ -66,6 +73,11 @@ function showApplication(){
             break;
         case 'Memphis':
             applicationMemphis.style.display = 'block';
+            buttonSection.style.display = 'none';
+            buttonRow.style.display = 'block';
+            break;    
+        case 'Birmingham':
+            applicationBham.style.display = 'block';
             buttonSection.style.display = 'none';
             buttonRow.style.display = 'block';
             break;    
@@ -88,6 +100,12 @@ function backButton(){
     } else
     if (resumeFormMemphis.style.display == 'block'){
         resumeFormMemphis.style.display = 'none';
+    }
+    if (applicationBham.style.display == 'block') {
+        applicationBham.style.display = 'none';
+    } else
+    if (resumeFormBham.style.display == 'block'){
+        resumeFormBham.style.display = 'none';
     }
     buttonSection.style.display = 'block';
 }
