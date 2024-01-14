@@ -114,11 +114,10 @@ function revealOptions(){
 let radio = document.getElementsByName('soundcheck-rating');
 // let radioArray = [].slice.call(radio, 0);
 let x = parseInt(radio[0].getAttribute('value'));
-console.log(radio);
 
 
-function serviceRadio(){
-    let radio = document.getElementsByName('service-rating');
+function radioStars(name){
+    let radio = document.getElementsByName(name);
     for (let i = 0; i<radio.length; i++) {
         let x = parseInt(radio[i].getAttribute('value'));
         if (radio[i].checked) {
@@ -127,63 +126,6 @@ function serviceRadio(){
             }
             for (let k = (x+1); k<radio.length; k++) {
                 document.getElementById('cs' + k).classList.remove('solid-star');
-            }
-        }
-    }
-}
-function soundcheckRadio(){
-    let radio = document.getElementsByName('soundcheck-rating');
-    for (let i = 0; i<radio.length; i++) {
-        let x = parseInt(radio[i].getAttribute('value'));
-        if (radio[i].checked) {
-            for (let j = (x-1); j>0; j--) {
-                document.getElementById('sc' + j).classList.add('solid-star');
-            }
-            for (let k = (x+1); k<radio.length; k++) {
-                document.getElementById('sc' + k).classList.remove('solid-star');
-            }
-        }
-    }
-}
-function overallRadio(){
-    let radio = document.getElementsByName('engineer-rating');
-    for (let i = 0; i<radio.length; i++) {
-        let x = parseInt(radio[i].getAttribute('value'));
-        if (radio[i].checked) {
-            for (let j = (x-1); j>0; j--) {
-                document.getElementById('all' + j).classList.add('solid-star');
-            }
-            for (let k = (x+1); k<radio.length; k++) {
-                document.getElementById('all' + k).classList.remove('solid-star');
-            }
-        }
-    }
-}
-function monitorRadio(){
-    let radio = document.getElementsByName('mix-rating');
-    for (let i = 0; i<radio.length; i++) {
-        let x = parseInt(radio[i].getAttribute('value'));
-        if (radio[i].checked) {
-            for (let j = (x-1); j>0; j--) {
-                document.getElementById('mon' + j).classList.add('solid-star');
-            }
-            for (let k = (x+1); k<radio.length; k++) {
-                document.getElementById('mon' + k).classList.remove('solid-star');
-            }
-        }
-    }
-}
-
-function generalRadio(){
-    let radio = document.getElementsByName('general-rating');
-    for (let i = 0; i<radio.length; i++) {
-        let x = parseInt(radio[i].getAttribute('value'));
-        if (radio[i].checked) {
-            for (let j = (x-1); j>0; j--) {
-                document.getElementById('gen' + j).classList.add('solid-star');
-            }
-            for (let k = (x+1); k<radio.length; k++) {
-                document.getElementById('gen' + k).classList.remove('solid-star');
             }
         }
     }
@@ -201,9 +143,9 @@ function closeNav() {
     document.getElementById("main").style.opacity = "1";
 }
 
-let closed = true;
 
 function toggleNestedNav(){
+    let closed = true;
     if (closed == true) {
         document.getElementById("nestedNav").style.height = "190px";
         closed = false;
