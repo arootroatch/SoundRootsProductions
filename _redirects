@@ -1,4 +1,5 @@
 /mentorship/*                 https://lucky-cupcake-5bf4a9.netlify.app/:splat                   200
 /mentorship                   https://lucky-cupcake-5bf4a9.netlify.app/                         200
-/mentorship/learn/*           https://lucky-cupcake-5bf4a9.netlify.app/learn/:splat             200
-/mentorship/learn/posts/*     https://lucky-cupcake-5bf4a9.netlify.app/learn/posts/:splat       200                         
+/learn                        https://lucky-cupcake-5bf4a9.netlify.app/learn/                   200
+/learn/*                      https://lucky-cupcake-5bf4a9.netlify.app/learn/:splat             200
+learn/posts/*                 https://lucky-cupcake-5bf4a9.netlify.app/learn/posts/:splat       200                         
