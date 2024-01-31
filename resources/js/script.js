@@ -20,52 +20,114 @@ window.addEventListener("resize", function() {
 var enabled = 'yes';
 var faderPath = document.getElementById('scrolltrack');
 var fader = document.getElementById('scrollthumb');
-
+let touch = false;
 
 //click and drag
-fader.onmousedown = function(event) {
-    enabled = 'no';
-    // document.body.append(fader);
-    function moveAt(clientY) {
-        // fader.style.left = pageX - fader.offsetWidth / 2 + 'px';
+fader.addEventListener('mousedown', pickup, false);
+function pickup(event) {
+    if (touch == false){
+        enabled = 'no';
+        let startPos = event.clientY;
+        let faderStart = fader.offsetTop;
         let bottomEdge = faderPath.offsetHeight - fader.offsetHeight;
-        let newTop = clientY - fader.offsetHeight/.55;        
-        //restrains fader in track
-        if(newTop<0){
-            newTop=0;
-        }
-        if(newTop>bottomEdge){
-            newTop = bottomEdge;
-        }
 
-        //sets new position
-        fader.style.top = `${newTop}px`;
-        //convert position to percentage
-        var newTopPer = (newTop / bottomEdge);
-        //make page scroll with fader position
-        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        var scrollPos = newTopPer*height;
-        document.documentElement.scrollTop = scrollPos;
-    }
-    moveAt(event.clientY);
+        let needRAF = null;
+        function moveAt(event) {
+            if (needRAF){
+                needRAF = null;
+                cancelAnimationFrame(setNew);
+            }
+            needRAF = requestAnimationFrame(setNew);
+            function setNew(){
+                let dragDist = event.clientY - startPos;
+                let newTop = faderStart + dragDist;        
+                //restrains fader in track
+                if(newTop<0){
+                    newTop=0;
+                } else if(newTop>bottomEdge){
+                    newTop = bottomEdge;
+                }
 
-    function onMouseMove(event) {
-        moveAt(event.clientY);
-    }
-    document.addEventListener('mousemove', onMouseMove);
-    document.onmouseup = function() {
-        document.removeEventListener('mousemove', onMouseMove);
-        fader.onmouseup = null;
-        enabled = 'yes';
+                //sets new position
+                fader.style.top = `${newTop}px`;
+                //convert position to percentage
+                var newTopPer = (newTop / bottomEdge);
+                //make page scroll with fader position
+                var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                var scrollPos = newTopPer*height;
+                document.documentElement.scrollTop = scrollPos;
+            }
+        }
+        document.addEventListener('mousemove', moveAt, false);
+        document.addEventListener('mouseup', dropIt, false);
+
+        function dropIt() {
+            document.removeEventListener('mousemove', moveAt, false);
+            fader.onmouseup = null;
+            enabled = 'yes';
+        }
     }
 }
+
+fader.addEventListener('touchstart', touchPickup, false);
+function touchPickup(event) {
+    event.preventDefault();
+    enabled = 'no';
+    touch = true;
+    let startPos = event.targetTouches[0].clientY;
+    let faderStart = fader.offsetTop;
+    //declare bottomEdge here to prevent recalculating with each drag move
+    let bottomEdge = faderPath.offsetHeight - fader.offsetHeight;
+
+    let needRAF = null;
+    function moveAt(touchEvent) {
+        touchEvent.preventDefault();
+        if (needRAF) {
+            needRAF = null;
+            cancelAnimationFrame(setNew);
+        }
+        needRAF = requestAnimationFrame(setNew);
+        function setNew() {
+            let dragDist = touchEvent.targetTouches[0].clientY - startPos; 
+            let newTop = faderStart + dragDist;
+                
+            //restrains fader in track
+            if(newTop<0){
+                newTop=0;
+            } else if(newTop>bottomEdge){
+                newTop = bottomEdge;
+            }
+            fader.style.top = `${newTop}px`;
+            //convert position to percentage
+            var newTopPer = (newTop / bottomEdge);
+            //make page scroll with fader position
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrollPos = newTopPer*height;
+            document.documentElement.scrollTop = scrollPos;
+        }
+        
+        
+        
+    }
+    document.addEventListener('touchmove', moveAt, false);
+    document.addEventListener('touchend', dropIt, false);
+    document.addEventListener('touchcancel', function(e){e.preventDefault()}, false);
+
+    function dropIt() {
+        document.removeEventListener('touchmove', moveAt, false);
+        fader.ontouchend = null;
+        enabled = 'yes';
+        touch = false;
+    }
+}
+
 fader.ondragstart = function() {
     return false;
 }
 
 //make fader move with window scrolling
-
-window.onscroll = function scrollLink(){
+window.addEventListener('scroll', scrollLink, false);
+function scrollLink(){
     if(enabled == 'yes') {
         var scrollPos = document.documentElement.scrollTop;
         var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -112,6 +174,9 @@ function closeNav() {
     document.getElementById("sideNav").style.width = "0px";
     document.getElementById("main").style.opacity = "1";
 }
+//close Nav when clicking outisde of it
+document.getElementById('main').addEventListener('touchstart', closeNav);
+document.getElementById('main').addEventListener('mousedown', closeNav);
 
 let closed = true;
 
