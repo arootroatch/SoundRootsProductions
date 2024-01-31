@@ -1,1 +1,2 @@
-/mentorship   https://lucky-cupcake-5bf4a9.netlify.app/:splat 200
+/mentorship/*   https://lucky-cupcake-5bf4a9.netlify.app/:splat 200
+/mentorship     https://lucky-cupcake-5bf4a9.netlify.app/       200
