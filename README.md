@@ -40,9 +40,9 @@ This site is hosted on Netlify and uses Netlify form handling.
 
 ### Redirects to subdomain
 
-[soundrootsproductions.com/mentorship](soundrootsproductions.com/mentorship) redirects to [mentorship.soundrootsproductions.com](mentorship.soundrootsproductions.com), the home page for the mentorship/educational wing of Sound Roots Productions.
+[soundrootsproductions.com/mentorship](https://www.soundrootsproductions.com/mentorship) redirects to [mentorship.soundrootsproductions.com](https://www.mentorship.soundrootsproductions.com), the home page for the mentorship/educational wing of Sound Roots Productions.
 
-[soundrootsproductions.com/learn](soundrootsproductions.com/learn) redirects to [mentorship.soundrootsproductions.com/learn](mentorship.soundrootsproductions.com/learn), the homepage for the Sound Roots Mentorship blog site.
+[soundrootsproductions.com/learn](https://www.soundrootsproductions.com/learn) redirects to [mentorship.soundrootsproductions.com/learn](https://www.mentorship.soundrootsproductions.com/learn), the homepage for the Sound Roots Mentorship blog site.
 
 The mentorship homepage and blog site are both currently under development.
 
